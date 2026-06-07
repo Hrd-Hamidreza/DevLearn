@@ -1,6 +1,7 @@
 const courses = [
   {
     id: 1,
+    quantity: 1,
     title: "آموزش جامع React از مقدماتی تا پیشرفته",
     categoryId: 2,
     price: 350000,
@@ -28,6 +29,7 @@ const courses = [
   },
   {
     id: 2,
+    quantity: 1,
     title: "دوره فوق‌ تخصصی PHP MVC",
     categoryId: 1,
     price: 1200000,
@@ -52,6 +54,7 @@ const courses = [
   },
   {
     id: 3,
+    quantity: 1,
     title: "دوره آموزشی گیت و گیت هاب",
     categoryId: 3,
     price: 850000,
@@ -76,6 +79,7 @@ const courses = [
   },
   {
     id: 4,
+    quantity: 1,
     title: "دوره آموزشی HTML",
     categoryId: 3,
     price: 600000,
@@ -83,11 +87,11 @@ const courses = [
     image: "/images/course/html.webp",
     level: "مقدماتی",
     duration: "۸ ساعت",
-    teacherId: 3,
+    teacherId: 1,
     teacher: {
-      name: "محمد عبادی",
+      name: "محمد محمدی",
       avatar: "/images/teachers/1.webp",
-      bio: "کارشناس DevOps با تجربه عملی در CI/CD و مدیریت پروژه با HTML",
+      bio: "برنامه‌نویس فرانت‌اند و مدرس React با بیش از ۶ سال تجربه",
     },
     outline: [
       "مقدمه‌ای بر HTML",
@@ -100,6 +104,7 @@ const courses = [
   },
   {
     id: 5,
+    quantity: 1,
     title: "دوره آموزشی Sass",
     categoryId: 3,
     price: 450000,
@@ -107,11 +112,11 @@ const courses = [
     image: "/images/course/SASS.webp",
     level: "متوسط",
     duration: "3 ساعت",
-    teacherId: 3,
+    teacherId: 2,
     teacher: {
-      name: "فرهاد کاظم زاده",
+      name: "علیرضا حسینی",
       avatar: "/images/teachers/3.png",
-      bio: "کارشناس DevOps با تجربه عملی در CI/CD و مدیریت پروژه با Sass",
+      bio: "برنامه‌نویس بک‌اند با ۸ سال تجربه در توسعه وب و متخصص PHP",
     },
     outline: [
       "مقدمه‌ای بر Sass",
@@ -124,6 +129,7 @@ const courses = [
   },
   {
     id: 6,
+    quantity: 1,
     title: "دوره آموزشی جاوا اسکریپت",
     categoryId: 3,
     price: 1600000,
@@ -133,9 +139,9 @@ const courses = [
     duration: "10 ساعت",
     teacherId: 3,
     teacher: {
-      name: "نگار کامیار",
+      name: "سارا محمدی",
       avatar: "/images/teachers/2.png",
-      bio: "کارشناس DevOps با تجربه عملی در CI/CD و مدیریت پروژه با جاوا اسکریپت",
+      bio: "کارشناس DevOps با تجربه عملی در CI/CD و مدیریت پروژه با Git",
     },
     outline: [
       "مقدمه‌ای بر جاوا اسکریپت",

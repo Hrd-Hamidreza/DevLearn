@@ -1,6 +1,6 @@
 //! ---------------------------------------- Import
 import React from "react";
-//! ---------------------------------------- Component (Main)
+//! ---------------------------------------- Component (About)
 const About = () => {
   return (
     <div className="min-h-fit bg-gray-200 rounded-3xl flex-grow max-w-6xl flex flex-col mx-auto text-gray-800 p-5 my-15">
