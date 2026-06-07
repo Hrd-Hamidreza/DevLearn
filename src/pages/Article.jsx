@@ -3,10 +3,10 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import articles from "../data/articles";
 import ArticleCard from "../components/Cards/ArticleCard";
-//! ---------------------------------------- Component (Home)
+//! ---------------------------------------- Component (Article)
 const Article = () => {
   return (
-    <div className="min-h-fit bg-gray-200 rounded-3xl flex-grow max-w-6xl flex flex-col mx-auto text-gray-800 p-5 my-15">
+    <div className="min-h-fit bg-gray-200 rounded-3xl flex-grow w-6xl flex flex-col mx-auto text-gray-800 p-5 my-15">
       <div className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">
           همه مقالات

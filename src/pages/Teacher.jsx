@@ -3,8 +3,8 @@ import React from "react";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import teachers from "../data/teachers";
 import { Link } from "react-router-dom";
-//! ---------------------------------------- Component (Teachers)
-const Teachers = () => {
+//! ---------------------------------------- Component (Teacher)
+const Teacher = () => {
   return (
     <div className="min-h-fit bg-gray-200 rounded-3xl flex-grow max-w-6xl flex flex-col mx-auto text-gray-800 p-5 my-15">
       <h2 className="text-4xl font-bold text-center mb-12">مدرسین ما</h2>
@@ -62,4 +62,4 @@ const Teachers = () => {
   );
 };
 
-export default Teachers;
+export default Teacher;

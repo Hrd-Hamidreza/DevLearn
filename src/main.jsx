@@ -4,10 +4,11 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import "./styles/main.scss";
 import App from "./App";
+import CartProvider from "./context/CartProvider";
 //! ------------------------------------ Create
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <CartProvider>
     <App />
-  </StrictMode>,
+  </CartProvider>,
 );
 //! ------------------------------------ Export

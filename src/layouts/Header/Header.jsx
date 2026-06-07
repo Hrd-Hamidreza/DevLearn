@@ -1,8 +1,11 @@
 //! ---------------------------------------- Import
 import { Link, NavLink } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
+import { useContext } from "react";
+import { stateContext } from "/src/context/CartProvider";
 //! ---------------------------------------- Component (Header)
 export default function Header() {
+  const { state } = useContext(stateContext);
   return (
     <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center h-[4rem] fixed top-0 left-0 right-0 z-100">
       <Link
@@ -22,7 +25,7 @@ export default function Header() {
         <NavLink to={"article"} className="hover:text-blue-600">
           مقالات
         </NavLink>
-        <NavLink to={"teachers"} className="hover:text-blue-600">
+        <NavLink to={"teacher"} className="hover:text-blue-600">
           مدرسین
         </NavLink>
         <NavLink to={"about"} className="hover:text-blue-600">
@@ -35,7 +38,7 @@ export default function Header() {
         <Link to={"cart"} className="relative cursor-pointer">
           <FaCartShopping className="text-2xl" />
           <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-            ۳
+            {state.courses.length}
           </span>
         </Link>
 
