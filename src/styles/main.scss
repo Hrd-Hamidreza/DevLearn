@@ -1,13 +1,12 @@
 //! ------------------------------------ Import */
 //Todo ------------------ Sass */
 //? --------- Abstracts */
-@use "./abstracts/variables";
-@use "./abstracts/mixins";
+@use "/src/styles/abstracts/variables";
+@use "/src/styles/abstracts/mixins";
 //? --------- Base */
-@use "./base/reset";
+@use "/src/styles/base/reset";
 //? --------- Components */
 //? --------- layouts */
 //? --------- Pages */
-@use "./pages/home";
 //? --------- Themes */
 //? --------- Utilities */

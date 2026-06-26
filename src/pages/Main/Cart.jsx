@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
 import React from "react";
-import ShoppingCart from "../components/Cart/Main/ShoppingCart";
-import Review from "../components/Cart/Main/Review";
+import ShoppingCart from "../../components/Cart/Main/ShoppingCart";
+import Review from "../../components/Cart/Main/Review";
 //! ---------------------------------------- Component (Cart)
 const Cart = () => {
   return (

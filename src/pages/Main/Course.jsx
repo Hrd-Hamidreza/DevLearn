@@ -1,6 +1,6 @@
 //! ---------------------------------------- Import
 import courses from "/src/data/courses.js";
-import CourseCard from "../components/Cards/CourseCard";
+import CourseCard from "../../components/Cards/CourseCard";
 //! ---------------------------------------- Component (Course)
 const Course = () => {
   return (

@@ -1,24 +1,24 @@
 //! ---------------------------------------- Import
 import { useContext } from "react";
 import { FaTrash } from "react-icons/fa";
-import { stateContext } from "/src/context/CartProvider";
+import { cartContext } from "/src/context/CartProvider";
 //! ---------------------------------------- Component (ShoppingCart)
 export default function ShoppingCart() {
-  //! ---------------------------------------- State
-  const { state, dispatch } = useContext(stateContext);
+  //! ---------------------------------------- cartState
+  const { cartState, dispatch } = useContext(cartContext);
   //! ---------------------------------------- Return
   return (
     <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-md overflow-auto">
-      {state.courses.length === 0 ? (
+      {cartState.courses.length === 0 ? (
         <div className="flex justify-center items-center w-full h-full">
           هیچ آیتمی در سبد خرید شما وجود ندارد
         </div>
       ) : (
         <div className="space-y-4">
-          {state.courses.map((course, idx) => (
+          {cartState.courses.map((course, idx) => (
             <div
               key={course.id}
-              className={`flex items-center justify-between ${idx !== state.courses.length - 1 ? "border-b" : ""}  pb-4`}
+              className={`flex items-center justify-between ${idx !== cartState.courses.length - 1 ? "border-b" : ""}  pb-4`}
             >
               <div className="flex items-center gap-4">
                 <img

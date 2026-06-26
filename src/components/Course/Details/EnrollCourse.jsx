@@ -1,9 +1,9 @@
 //! ---------------------------------------- Import
 import { useContext } from "react";
-import { stateContext } from "/src/context/CartProvider";
+import { cartContext } from "/src/context/CartProvider";
 //! ---------------------------------------- Component (CourseCard)
 export default function EnrollCourse({ chosen }) {
-  const { dispatch } = useContext(stateContext);
+  const { dispatch } = useContext(cartContext);
   return (
     <div className="bg-blue-50 border border-blue-200 p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center">
       <div className="mb-4 sm:mb-0">

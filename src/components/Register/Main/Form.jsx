@@ -1,7 +1,11 @@
 //! ---------------------------------------- Import
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import { useContext } from "react";
+import { userContext } from "/src/context/UserProvider";
+import { Link } from "react-router-dom";
 //! ---------------------------------------- Component (Form)
 export default function Form() {
+  const { userState, dispatch } = useContext(userContext);
   return (
     <div className="p-8 sm:p-12">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
@@ -43,9 +47,9 @@ export default function Form() {
 
         <div className="text-center text-sm text-gray-600">
           حساب داری؟
-          <a href="/login" className="text-indigo-600 hover:underline">
+          <Link to={"/login"} className="text-indigo-600 hover:underline">
             وارد شو
-          </a>
+          </Link>
         </div>
       </form>
     </div>

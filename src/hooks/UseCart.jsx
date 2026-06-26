@@ -2,18 +2,20 @@
 import { useEffect, useReducer } from "react";
 import UseLocalStorage from "/src/hooks/UseLocalStorage";
 import { cartReducer, initialState } from "/src/Reducers/cartReducer";
+//! ---------------------------------------- Variables
+const CART = "Cart";
 //! ---------------------------------------- Component (Use Base)
-export default function UseBase() {
+export default function UseCart() {
   //! ---------------------------------------- Use
-  const [setLocalStorage, getLocalStorage] = UseLocalStorage();
+  const [setLocalStorage, getLocalStorage] = UseLocalStorage(CART);
   const saved = getLocalStorage();
-  const [state, dispatch] = useReducer(
+  const [cartState, dispatch] = useReducer(
     cartReducer,
-    saved?.state || initialState,
+    saved?.cartState || initialState,
   );
   useEffect(() => {
-    setLocalStorage({ state });
-  }, [state]);
+    setLocalStorage({ cartState });
+  }, [cartState]);
   //! ---------------------------------------- Return
-  return [state, dispatch];
+  return [cartState, dispatch];
 }

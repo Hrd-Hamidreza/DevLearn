@@ -1,16 +1,15 @@
 //! ---------------------------------------- Import
 //! ---------------------------------------- Variables
-const DEV_LEARN = "DevLearn";
 //! ---------------------------------------- Hook (UseLocalStorage)
-export default function UseLocalStorage() {
+export default function UseLocalStorage(name) {
   //! ---------------------------------------- Function (LocalStorage)
   //? -------------------- Set Local Storage
   const setLocalStorage = (data) => {
-    localStorage.setItem(DEV_LEARN, JSON.stringify(data));
+    localStorage.setItem(name, JSON.stringify(data));
   };
   //? -------------------- Get Local Storage
   const getLocalStorage = () => {
-    const storaged = localStorage.getItem(DEV_LEARN);
+    const storaged = localStorage.getItem(name);
     return JSON.parse(storaged);
   };
   //! ---------------------------------------- Return

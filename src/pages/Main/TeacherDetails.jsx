@@ -3,10 +3,10 @@ import React from "react";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import teachers from "/src/data/teachers.js";
-import NotFound from "/src/pages/NotFound";
-import Profile from "../components/Teachers/Details/Profile";
-import Skills from "../components/Teachers/Details/Skills";
-import Courses from "../components/Teachers/Details/Courses";
+import NotFound from "/src/pages/Main/NotFound";
+import Profile from "../../components/Teachers/Details/Profile";
+import Skills from "../../components/Teachers/Details/Skills";
+import Courses from "../../components/Teachers/Details/Courses";
 //! ---------------------------------------- Component (Router)
 const TeacherDetails = () => {
   const { id } = useParams();

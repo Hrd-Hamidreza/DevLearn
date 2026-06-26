@@ -1,16 +1,16 @@
 //! ---------------------------------------- Import
 import { createContext } from "react";
-import UseBase from "../hooks/UseBase";
+import UseCart from "../hooks/UseCart";
 //! ---------------------------------------- Variables
-export const stateContext = createContext();
+export const cartContext = createContext();
 //! ---------------------------------------- Component (Cart Provider)
 export default function CartProvider({ children }) {
   //! ----------------------------------------
-  const [state, dispatch] = UseBase();
+  const [cartState, dispatch] = UseCart();
   //! ----------------------------------------
   return (
-    <stateContext.Provider value={{ state, dispatch }}>
+    <cartContext.Provider value={{ cartState, dispatch }}>
       {children}
-    </stateContext.Provider>
+    </cartContext.Provider>
   );
 }
