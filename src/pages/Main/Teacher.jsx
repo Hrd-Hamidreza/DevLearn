@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
 import React from "react";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import teachers from "../data/teachers";
+import teachers from "../../data/teachers";
 import { Link } from "react-router-dom";
 //! ---------------------------------------- Component (Teacher)
 const Teacher = () => {

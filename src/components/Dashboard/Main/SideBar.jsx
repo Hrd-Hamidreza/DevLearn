@@ -1,4 +1,5 @@
 //! ---------------------------------------- Import
+import { useContext } from "react";
 import {
   FaBook,
   FaUser,
@@ -7,38 +8,65 @@ import {
   FaBell,
   FaCreditCard,
 } from "react-icons/fa";
+import { Navigate, NavLink } from "react-router-dom";
+import { userContext } from "/src/context/UserProvider";
 //! ---------------------------------------- Component (Dashboard)
 export default function SideBar() {
+  //! ----------------------------------------
+  const { userState, dispatch } = useContext(userContext);
+  const exit = () => {
+    dispatch({ type: "LogOut" });
+    <Navigate to={"login"} />;
+  };
+  //! ---------------------------------------- Return
   return (
     <aside className="w-64 bg-white border-l border-gray-200 shadow px-4 py-6 hidden md:block">
       <h2 className="text-xl font-bold text-blue-600 mb-8 text-center">
         پنل کاربری
       </h2>
       <ul className="space-y-4 text-gray-700 text-sm">
-        <li className="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer bg-blue-100 text-blue-700 font-semibold">
-          <FaBook />
-          <span>دوره‌های من</span>
-        </li>
-        <li className="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100">
+        <NavLink
+          to={"profile"}
+          className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100"
+        >
           <FaUser />
           <span>پروفایل</span>
-        </li>
-        <li className="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100">
-          <FaCog />
-          <span>تنظیمات</span>
-        </li>
-        <li className="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100">
+        </NavLink>
+        <NavLink
+          to={"courses"}
+          className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer font-semibold"
+        >
+          <FaBook />
+          <span>دوره‌های من</span>
+        </NavLink>
+        <NavLink
+          to={"transactions"}
+          className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100"
+        >
           <FaCreditCard />
           <span>تراکنش‌ها</span>
-        </li>
-        <li className="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100">
+        </NavLink>
+        <NavLink
+          to={"notifications"}
+          className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100"
+        >
           <FaBell />
           <span>اعلان‌ها</span>
-        </li>
-        <li className="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100">
+        </NavLink>
+        <NavLink
+          to={"settings"}
+          className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100"
+        >
+          <FaCog />
+          <span>تنظیمات</span>
+        </NavLink>
+        <button
+          onClick={() => exit()}
+          className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-red-400 w-full"
+        >
           <FaSignOutAlt />
           <span>خروج</span>
-        </li>
+        </button>
       </ul>
     </aside>
   );

@@ -4,14 +4,14 @@ export const initialState = {
   courses: [],
 };
 //! ---------------------------------------- Functions
-export function cartReducer(state, action) {
+export function cartReducer(cartState, action) {
   // ! ------------------------------------- Pre
   // ! ------------------- repetitiveCourse
-  const repetitiveCourse = state.courses.find(
+  const repetitiveCourse = cartState.courses.find(
     (course) => +course.id === +action.course.id,
   );
   // ! ------------------- Deleted
-  const deleted = state.courses.filter(
+  const deleted = cartState.courses.filter(
     (course) => +course.id !== +action.course.id,
   );
   // ! ------------------------------------- Switch
@@ -19,19 +19,19 @@ export function cartReducer(state, action) {
     // ! -------------------- Buy
     case "Buy":
       return {
-        ...state,
+        ...cartState,
         courses: repetitiveCourse
-          ? [...state.courses]
-          : [action.course, ...state.courses],
+          ? [...cartState.courses]
+          : [action.course, ...cartState.courses],
       };
     // ! -------------------- Delete
     case "Delete":
-      return { ...state, courses: deleted };
+      return { ...cartState, courses: deleted };
     // ! -------------------- Quantity
     case "Quantity":
       return {
-        ...state,
-        courses: state.courses.map((course) =>
+        ...cartState,
+        courses: cartState.courses.map((course) =>
           +course.id === +action.course.id
             ? {
                 ...course,
