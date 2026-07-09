@@ -1,13 +1,13 @@
 //! ---------------------------------------- Import
 import React from "react";
 import { useParams } from "react-router-dom";
-import courses from "../../data/courses";
-import HeadCourse from "../../components/Course/Details/HeadCourse";
-import InfoBoxCourse from "../../components/Course/Details/InfoBoxCourse";
-import TeacherBoxCourse from "../../components/Course/Details/TeacherBoxCourse";
-import OutlineCourse from "../../components/Course/Details/OutlineCourse";
-import EnrollCourse from "../../components/Course/Details/EnrollCourse";
-import NotFound from "./NotFound";
+import courses from "/src/data/courses";
+import HeadCourse from "/src/components/Course/Details/HeadCourse";
+import InfoBoxCourse from "/src/components/Course/Details/InfoBoxCourse";
+import TeacherBoxCourse from "/src/components/Course/Details/TeacherBoxCourse";
+import OutlineCourse from "/src/components/Course/Details/OutlineCourse";
+import EnrollCourse from "/src/components/Course/Details/EnrollCourse";
+import NotFound from "/src/pages/Main/NotFound";
 //! ---------------------------------------- Component (CourseCard)
 const CourseDetails = () => {
   const { id } = useParams();

@@ -1,24 +1,25 @@
 //! ---------------------------------------- Import
-import { useContext } from "react";
 import { FaTrash } from "react-icons/fa";
-import { cartContext } from "/src/context/CartProvider";
+import { useDispatch, useSelector } from "react-redux";
+import { quantity, deleted } from "/src/features/cart/cartSlice";
 //! ---------------------------------------- Component (ShoppingCart)
 export default function ShoppingCart() {
-  //! ---------------------------------------- cartState
-  const { cartState, dispatch } = useContext(cartContext);
+  //! ---------------------------------------- cart
+  const { cart, account } = useSelector((store) => store);
+  const dispatch = useDispatch();
   //! ---------------------------------------- Return
   return (
     <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-md overflow-auto">
-      {cartState.courses.length === 0 ? (
+      {cart.courses.length === 0 ? (
         <div className="flex justify-center items-center w-full h-full">
           هیچ آیتمی در سبد خرید شما وجود ندارد
         </div>
       ) : (
         <div className="space-y-4">
-          {cartState.courses.map((course, idx) => (
+          {cart.courses.map((course, idx) => (
             <div
               key={course.id}
-              className={`flex items-center justify-between ${idx !== cartState.courses.length - 1 ? "border-b" : ""}  pb-4`}
+              className={`flex items-center justify-between ${idx !== cart.courses.length - 1 ? "border-b" : ""}  pb-4`}
             >
               <div className="flex items-center gap-4">
                 <img
@@ -34,11 +35,7 @@ export default function ShoppingCart() {
                   <div className="flex justify-start items-center gap-1">
                     <button
                       onClick={() =>
-                        dispatch({
-                          type: "Quantity",
-                          priority: "Plus",
-                          course: course,
-                        })
+                        dispatch(quantity({ priority: "Plus", course: course }))
                       }
                       className="bg-green-500 text-white rounded-xl w-8 h-7 text-xl cursor-pointer"
                     >
@@ -49,11 +46,9 @@ export default function ShoppingCart() {
                     </span>
                     <button
                       onClick={() =>
-                        dispatch({
-                          type: "Quantity",
-                          priority: "Minus",
-                          course: course,
-                        })
+                        dispatch(
+                          quantity({ priority: "Minus", course: course }),
+                        )
                       }
                       className="bg-red-500 text-white rounded-xl w-8 h-7 text-xl cursor-pointer"
                     >
@@ -67,7 +62,7 @@ export default function ShoppingCart() {
                   {(course.quantity * course.price).toLocaleString()} تومان
                 </p>
                 <button
-                  onClick={() => dispatch({ type: "Delete", course: course })}
+                  onClick={() => dispatch(deleted(course))}
                   className="cursor-pointer flex rounded items-center justify-center gap-2 text-white px-4 mt-3 py-2 text-sm bg-red-500 hover:text-gray-700 transition"
                 >
                   <FaTrash className="w-3 h-3" />

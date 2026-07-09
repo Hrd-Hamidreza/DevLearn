@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
 import React from "react";
-import Image from "../../components/Register/Main/Image";
-import Form from "../../components/Register/Main/Form";
+import Image from "/src/components/Register/Main/Image";
+import Form from "/src/components/Register/Main/Form";
 //! ---------------------------------------- Component (Dashboard)
 const Register = () => {
   return (

@@ -68,13 +68,13 @@ const articles = [
       {
         id: 1,
         title: "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما",
-        cover: "/images/blog/js.png",
+        cover: "/images/blog/git.jpg",
         slug: "programming-performance",
       },
       {
         id: 3,
         title: "راهنمای کامل استفاده از Git در تیم‌های حرفه‌ای",
-        cover: "/images/blog/git.jpg",
+        cover: "/images/blog/js.png",
         slug: "git-guide",
       },
     ],
@@ -154,7 +154,7 @@ React یکی از مهم‌ترین ابزارهای کنترل نسخه است 
       {
         id: 2,
         title: "چگونه با پروژه واقعی یادگیری را عمیق‌تر کنیم؟",
-        cover: "/images/blog/react.webp",
+        cover: "/images/blog/js.png",
         slug: "deep-learning-projects",
       },
     ],

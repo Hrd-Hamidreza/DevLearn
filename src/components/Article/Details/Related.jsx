@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 //! ---------------------------------------- Component (Related)
 export default function Related({ chosen }) {
+  console.log(chosen);
   return (
     <div className="border-t pt-6">
       <h3 className="text-xl font-bold mb-4 text-blue-700">مقالات مرتبط</h3>

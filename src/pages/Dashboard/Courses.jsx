@@ -1,13 +1,13 @@
 //! ---------------------------------------- Import
-import { useContext } from "react";
-import { userContext } from "/src/context/UserProvider";
 import users from "/src/data/users";
 import courses from "/src/data/courses";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 //! ---------------------------------------- Component (Courses)
 export default function Courses() {
   //! ----------------------------------------
-  const { userState } = useContext(userContext);
-  const userInfo = users.find((user) => +user.id === +userState.user.id);
+  const { cart, account } = useSelector((store) => store);
+  const userInfo = users.find((user) => +user.id === +account.user.id);
   const userCourses = courses.filter((course) =>
     userInfo.purchasedCourses.includes(course.id),
   );
@@ -18,7 +18,8 @@ export default function Courses() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {userCourses.map((course) => (
-          <div
+          <Link
+            to={`/course/${course.id}`}
             key={course.id}
             className="bg-white rounded-xl shadow hover:shadow-md transition"
           >
@@ -39,7 +40,7 @@ export default function Courses() {
               </div>
               <p className="text-sm text-gray-500">پیشرفت: 60%</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>

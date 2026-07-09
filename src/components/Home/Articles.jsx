@@ -1,6 +1,6 @@
 //! ---------------------------------------- Import
 import articles from "/src/data/articles";
-import ArticleCard from "../Cards/ArticleCard";
+import ArticleCard from "/src/components/Cards/ArticleCard";
 //! ---------------------------------------- Component (Articles)
 export default function Articles() {
   return (

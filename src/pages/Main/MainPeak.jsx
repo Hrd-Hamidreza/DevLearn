@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
 import { Outlet } from "react-router-dom";
-import Header from "../../layouts/Header/Header";
-import Footer from "../../layouts/Footer/Footer";
+import Header from "/src/layouts/Header/Header";
+import Footer from "/src/layouts/Footer/Footer";
 //! ---------------------------------------- Variables
 //! ---------------------------------------- Functions
 //! ---------------------------------------- Component (MainPeak)

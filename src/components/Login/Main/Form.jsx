@@ -1,27 +1,31 @@
 //! ---------------------------------------- Import
 //! ---------------------------------------- npm install react-hook-form @hookform/resolvers yup
 import { FaLock, FaEnvelope, FaUserAlt } from "react-icons/fa";
-import { useContext, useState } from "react";
-import { userContext } from "/src/context/UserProvider";
+import { useState } from "react";
 import users from "/src/data/users";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { info, logIn } from "/src/features/user/userSlice";
 //! ---------------------------------------- Component (Dashboard)
 export default function Form() {
-  //! ---------------------------------------- Context
+  //! ----------------------------------------
   const navigate = useNavigate();
-  const { userState, dispatch } = useContext(userContext);
+  //! ----------------------------------------
+  const { cart, account } = useSelector((store) => store);
+  const dispatch = useDispatch();
+  //! ----------------------------------------
   const [checked, setChecked] = useState(true);
   const [valid, setValid] = useState(true);
-  //! ---------------------------------------- Function
+  //! ----------------------------------------
   const submitHandler = (event) => {
     event.preventDefault();
     const userInfo = users.find(
       (user) =>
-        user.email === userState.user.email &&
-        user.password === userState.user.password,
+        user.email === account.user.email &&
+        user.password === account.user.password,
     );
     if (userInfo) {
-      dispatch({ type: "Login", user: userInfo });
+      dispatch(logIn(userInfo));
       Boolean(userInfo) && navigate(`/dashboard`);
     }
     setChecked(Boolean(userInfo));
@@ -42,11 +46,9 @@ export default function Form() {
             <FaEnvelope className="svg-primary" />
             <input
               onChange={(event) => {
-                dispatch({
-                  type: "Info",
-                  priority: "Email",
-                  email: event.currentTarget.value,
-                });
+                dispatch(
+                  info({ priority: "Email", email: event.currentTarget.value }),
+                );
                 setValid(event.target.validity.valid);
               }}
               type="email"
@@ -66,11 +68,12 @@ export default function Form() {
             <FaLock className="svg-primary" />
             <input
               onChange={(event) =>
-                dispatch({
-                  type: "Info",
-                  priority: "Password",
-                  password: event.currentTarget.value,
-                })
+                dispatch(
+                  info({
+                    priority: "Password",
+                    password: event.currentTarget.value,
+                  }),
+                )
               }
               type="password"
               placeholder="رمز عبور"
@@ -89,9 +92,7 @@ export default function Form() {
             <input type="checkbox" className="accent-blue-600" />
             مرا به خاطر بسپار
           </label>
-          <a href="#" className="hover:text-blue-600">
-            فراموشی رمز؟
-          </a>
+          <Link className="hover:text-blue-600">فراموشی رمز؟</Link>
         </div>
 
         <button type="submit" className="btn-primary w-full py-2">

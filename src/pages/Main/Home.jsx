@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
-import Slider from "../../components/Home/Slider";
-import Popular from "../../components/Home/Popular";
-import Articles from "../../components/Home/Articles";
+import Slider from "/src/components/Home/Slider";
+import Popular from "/src/components/Home/Popular";
+import Articles from "/src/components/Home/Articles";
 //! ---------------------------------------- Component (Home)
 function Home() {
   return (

@@ -14,10 +14,10 @@
 
 /*! --------- Components */
 @layer components {
-    @import "./styles/components/_buttons.scss";
-    @import "./styles/components/_inputs.scss";
-    @import "./styles/pages/_all.scss";
-    @import "./styles/pages/_dashboard.scss";
+    @import "/src/styles/components/_buttons.scss";
+    @import "/src/styles/components/_inputs.scss";
+    @import "/src/styles/pages/_all.scss";
+    @import "/src/styles/pages/_dashboard.scss";
 }
 
 /*! --------- Utilities */

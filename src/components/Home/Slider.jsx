@@ -1,5 +1,5 @@
 //! ---------------------------------------- Import
-import categories from "../../data/categories";
+import categories from "/src/data/categories";
 //! ---------------------------------------- Component (Slider)
 export default function Slider() {
   return (

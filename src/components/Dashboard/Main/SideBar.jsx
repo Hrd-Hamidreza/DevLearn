@@ -1,5 +1,4 @@
 //! ---------------------------------------- Import
-import { useContext } from "react";
 import {
   FaBook,
   FaUser,
@@ -8,14 +7,15 @@ import {
   FaBell,
   FaCreditCard,
 } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { Navigate, NavLink } from "react-router-dom";
-import { userContext } from "/src/context/UserProvider";
+import { logOut } from "/src/features/user/userSlice";
 //! ---------------------------------------- Component (Dashboard)
 export default function SideBar() {
   //! ----------------------------------------
-  const { userState, dispatch } = useContext(userContext);
+  const dispatch = useDispatch();
   const exit = () => {
-    dispatch({ type: "LogOut" });
+    dispatch(logOut());
     <Navigate to={"login"} />;
   };
   //! ---------------------------------------- Return

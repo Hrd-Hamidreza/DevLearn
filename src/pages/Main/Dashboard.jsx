@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
 import React from "react";
-import SideBar from "../../components/Dashboard/Main/SideBar";
-import Focused from "../../components/Dashboard/Main/Focused";
+import SideBar from "/src/components/Dashboard/Main/SideBar";
+import Focused from "/src/components/Dashboard/Main/Focused";
 //! ---------------------------------------- Component (Dashboard)
 const Dashboard = () => {
   //! ----------------------------------------

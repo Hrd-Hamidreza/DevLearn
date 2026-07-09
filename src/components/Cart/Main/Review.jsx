@@ -1,12 +1,12 @@
 //! ---------------------------------------- Import
-import { useContext } from "react";
-import { cartContext } from "/src/context/CartProvider";
+import { useSelector } from "react-redux";
+import store from "/src/app/store";
 //! ---------------------------------------- Component (Head)
 export default function Review() {
-  //! ---------------------------------------- cartState
-  const { cartState } = useContext(cartContext);
+  //! ---------------------------------------- cart
+  const { cart, account } = useSelector((store) => store);
   //! ---------------------------------------- Reducer
-  const total = cartState.courses.reduce(
+  const total = cart.courses.reduce(
     (scratch, product) => scratch + product.price * product.quantity,
     0,
   );
@@ -20,9 +20,9 @@ export default function Review() {
       <div className="flex w-full justify-between text-gray-600 text-xl">
         <span>تعداد آیتم‌ها:</span>
         <span>
-          {cartState.courses.length !== 0
-            ? cartState.courses.length + " عدد"
-            : cartState.courses.length}
+          {cart.courses.length !== 0
+            ? cart.courses.length + " عدد"
+            : cart.courses.length}
         </span>
       </div>
 

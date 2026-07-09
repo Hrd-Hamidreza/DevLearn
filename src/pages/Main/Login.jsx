@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
 import React from "react";
-import Form from "../../components/Login/Main/Form";
-import Image from "../../components/Login/Main/Image";
+import Form from "/src/components/Login/Main/Form";
+import Image from "/src/components/Login/Main/Image";
 //! ---------------------------------------- Component (Login)
 const Login = () => {
   return (

@@ -1,8 +1,8 @@
 //! ---------------------------------------- Import
 import React from "react";
 import { FaSearch } from "react-icons/fa";
-import articles from "../../data/articles";
-import ArticleCard from "../../components/Cards/ArticleCard";
+import articles from "/src/data/articles";
+import ArticleCard from "/src/components/Cards/ArticleCard";
 //! ---------------------------------------- Component (Article)
 const Article = () => {
   return (

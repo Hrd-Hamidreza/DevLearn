@@ -1,12 +1,12 @@
 //! ---------------------------------------- Import
 import { useParams } from "react-router-dom";
-import articles from "../../data/articles";
-import Head from "../../components/Article/Details/Head";
-import Info from "../../components/Article/Details/Info";
-import Context from "../../components/Article/Details/Context";
-import Tags from "../../components/Article/Details/Tags";
-import Related from "../../components/Article/Details/Related";
-import NotFound from "./NotFound";
+import articles from "/src/data/articles";
+import Head from "/src/components/Article/Details/Head";
+import Info from "/src/components/Article/Details/Info";
+import Context from "/src/components/Article/Details/Context";
+import Tags from "/src/components/Article/Details/Tags";
+import Related from "/src/components/Article/Details/Related";
+import NotFound from "/src/pages/Main/NotFound";
 //! ---------------------------------------- Component (Article)
 const ArticleDetails = () => {
   const { id } = useParams();

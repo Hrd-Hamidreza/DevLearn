@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
 import { Link } from "react-router-dom";
 import courses from "/src/data/courses";
-import CourseCard from "../Cards/CourseCard";
+import CourseCard from "/src/components/Cards/CourseCard";
 //! ---------------------------------------- Component (Popular)
 export default function Popular() {
   return (
