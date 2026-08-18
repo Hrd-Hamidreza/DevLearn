@@ -45,11 +45,11 @@ export default function SideBar() {
       <h2 className="text-xl font-bold text-blue-600 mb-8 text-center">
         {entered || !isReload ? (
           <span>
-            <h3>به پنل کاربری خود</h3>
-            <span>خوش آمدید</span>
+            <span>Welcome</span>
+            <h3>To your user panel</h3>
           </span>
         ) : (
-          "پنل کاربری"
+          "User panel"
         )}
       </h2>
       <ul className="flex flex-col gap-4 text-gray-700 text-sm">
@@ -81,7 +81,7 @@ export default function SideBar() {
               className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-red-400 w-full"
             >
               <MyIcons type={`signOut-2`} />
-              <span>خروج</span>
+              <span>Log out</span>
             </button>
           </>
         )}

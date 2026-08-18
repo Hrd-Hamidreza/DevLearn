@@ -6,11 +6,11 @@ export default function RegisterImage() {
     <div className="hidden md:flex bg-gradient-to-tr from-blue-500 to-indigo-600 p-10 text-white relative">
       <div>
         <h2 className="text-3xl font-bold leading-tight mb-4">
-          به خانواده DevMinds بپیوند!
+          Join the DevMinds family!
         </h2>
         <p className="text-sm text-blue-100">
-          عضویت رایگانه! فقط چند ثانیه طول می‌کشه تا وارد دنیای یادگیری حرفه‌ای
-          بشی.
+          Membership is free! It only takes a few seconds to enter the world of
+          professional learning.
         </p>
         <img
           src="/images/register-illustration.svg"

@@ -28,11 +28,11 @@ export default function Courses() {
   //! ---------------------------------------- Return
   return (
     <>
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">دوره‌های من</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-6">My courses</h1>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {userCourses?.length === 0 ? (
-          <p className="text-lg">دوره ای برای نمایش وجود ندارد</p>
+          <p className="text-lg">There is no course to display.</p>
         ) : coursesLoading && UsersLoading ? (
           Array.from({ length: skeletonCount }).map((_, index) => (
             <CourseCard key={index} type={"my-courses"} />

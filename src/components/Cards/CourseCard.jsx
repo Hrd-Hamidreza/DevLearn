@@ -28,16 +28,19 @@ export default function CourseCard({ course = undefined, type = "default" }) {
             </Link>
 
             {type === "my-courses" && (
-              <p className="text-sm text-gray-500">پیشرفت: 60%</p>
+              <p className="text-sm text-gray-500">
+                <strong>Progress:</strong>
+                60%
+              </p>
             )}
 
             {type === "default" && (
               <>
                 <p className="text-sm text-gray-600">
-                  مدرس: {course?.teacher?.name}
+                  <strong>Teacher:</strong> {course?.teacher?.name}
                 </p>
                 <p className="text-blue-600 font-bold">
-                  {`${course?.price?.toLocaleString()} تومان`}
+                  {`${course?.price?.toLocaleString()} Toman`}
                 </p>
               </>
             )}

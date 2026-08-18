@@ -54,9 +54,9 @@ export default function RegisterForm() {
   //! ---------------------------------------- Return
   return (
     <div className="p-8 sm:p-12">
-      {/* Sign Up Title  ساخت حساب کاربری */}
+      {/* Sign Up Title */}
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-        ساخت حساب کاربری
+        Create an account
       </h2>
       {/* Form */}
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
@@ -66,7 +66,7 @@ export default function RegisterForm() {
             {...register("name")}
             name="name"
             type="text"
-            placeholder="نام کامل"
+            placeholder="Full name"
             className="input-primary"
           />
         </div>
@@ -81,7 +81,7 @@ export default function RegisterForm() {
             {...register("email")}
             name="email"
             type="email"
-            placeholder="ایمیل"
+            placeholder="Email"
             className="input-primary"
           />
         </div>
@@ -96,7 +96,7 @@ export default function RegisterForm() {
             {...register("password")}
             name="password"
             type="password"
-            placeholder="رمز عبور"
+            placeholder="Password"
             className="input-primary"
           />
         </div>
@@ -113,7 +113,7 @@ export default function RegisterForm() {
             {...register("rePassword")}
             name="rePassword"
             type="password"
-            placeholder="تایید رمز عبور"
+            placeholder="Confirm password"
             className="input-primary"
           />
         </div>
@@ -137,16 +137,16 @@ export default function RegisterForm() {
           className={`btn-primary w-full py-2 ${isSuccess ? "text-green-500 cursor-auto bg-blue-800 hover:bg-blue-800" : "text-white"}`}
         >
           {isPending
-            ? "در حال ساخت..."
+            ? "Under construction..."
             : isSuccess
-              ? `در حال انتقال به داشبورد ${counter}`
-              : "ساخت حساب کاربری"}
+              ? `Transferring to dashboard page ${counter}`
+              : "Create an account"}
         </button>
         {/* Login */}
         <div className="text-center text-sm text-gray-600">
-          حساب داری؟
+          Do you have an account?
           <Link to={"/login"} className="text-indigo-600 hover:underline">
-            {` وارد شو`}
+            {` Login`}
           </Link>
         </div>
       </form>

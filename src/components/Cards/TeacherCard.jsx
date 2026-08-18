@@ -10,12 +10,17 @@ export default function TeacherCard({ teacher = undefined }) {
         <div className="skeleton" />
       ) : (
         <>
-          <Link to={`/teacher/${teacher?.id}`}>
-            <img
-              src={teacher?.image}
-              alt={teacher?.name}
-              className="rounded-full w-32 h-32 object-cover border-4 border-blue-500 mb-4"
-            />
+          <Link
+            to={`/teacher/${teacher?.id}`}
+            className="flex flex-col justify-center items-center gap-3"
+          >
+            <span>
+              <img
+                src={teacher?.image}
+                alt={teacher?.name}
+                className="rounded-full w-32 h-32 object-cover border-4 border-blue-500"
+              />
+            </span>
             <h2 className="text-xl font-semibold mb-1">{teacher?.name}</h2>
           </Link>
           <p className="text-gray-600 mb-4">{teacher?.bio}</p>

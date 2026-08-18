@@ -5,11 +5,11 @@ export default function LoginImage() {
   return (
     <div className="hidden md:block bg-blue-600 p-10 text-white relative">
       <h2 className="text-3xl font-bold leading-tight mb-4">
-        خوش اومدی به DevMinds!
+        Welcome to DevMinds!
       </h2>
       <p className="text-sm text-blue-100 leading-relaxed">
-        برای دسترسی به پنل کاربری، لطفاً وارد حساب خودت شو. اگه حساب نداری
-        می‌تونی به راحتی ثبت‌نام کنی.
+        To access the user panel, please log in to your account. If you don't
+        have an account, you can easily register.
       </p>
       <img
         src="/images/login-illustration.svg"

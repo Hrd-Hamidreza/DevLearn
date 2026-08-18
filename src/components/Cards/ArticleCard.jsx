@@ -30,14 +30,13 @@ export default function ArticleCard({ article = undefined }) {
               {article?.content}
             </p>
             <div className="text-xs text-gray-400 mt-3">
-              <span>{article?.author?.name}</span> |{" "}
-              <span>{article?.date}</span>
+              <span>{article?.author?.name}</span> |<span>{article?.date}</span>
             </div>
             <Link
               to={`/article/${article?.id}`}
               className="flex gap-2 text-sm text-indigo-600 mt-2 hover:underline font-medium w-fit"
             >
-              مطالعه مقاله
+              Study
             </Link>
           </div>
         </>

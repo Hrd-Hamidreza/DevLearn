@@ -7,19 +7,19 @@ const NavBar = () => {
   return (
     <nav className="flex gap-7 md:flex">
       <NavLink to={"/"} className="hover:text-blue-600">
-        خانه
+        Home
       </NavLink>
       <NavLink to={"course"} className="hover:text-blue-600">
-        دوره‌ها
+        Courses
       </NavLink>
       <NavLink to={"article"} className="hover:text-blue-600">
-        مقالات
+        Articles
       </NavLink>
       <NavLink to={"teacher"} className="hover:text-blue-600">
-        مدرسین
+        Teachers
       </NavLink>
       <NavLink to={"about"} className="hover:text-blue-600">
-        درباره ما
+        About us
       </NavLink>
     </nav>
   );

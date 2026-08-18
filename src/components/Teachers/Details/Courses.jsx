@@ -9,7 +9,7 @@ export default function Courses({ teacher = undefined }) {
   return (
     <div className="flex flex-col gap-3">
       <h3 className="text-xl font-semibold text-blue-700 mb-6">
-        دوره‌های تدریسی
+        Teaching courses
       </h3>
       <ul className="flex overflow-auto gap-5 py-5">
         {teacher

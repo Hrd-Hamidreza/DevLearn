@@ -14,7 +14,9 @@ export default function Course() {
   //! ---------------------------------------- Return
   return (
     <div className="w-4/5 mx-auto min-h-[30rem] bg-gray-200 rounded-3xl flex-grow flex flex-col text-gray-800 p-5 my-15">
-      <h2 className="text-4xl font-bold mb-10 text-center">دوره‌های آموزشی</h2>
+      <h2 className="text-3xl font-extrabold mb-10 text-center">
+        Training courses
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-h-90 overflow-auto px-5">
         {isLoading
           ? Array.from({ length: skeletonCount }).map((_, index) => (

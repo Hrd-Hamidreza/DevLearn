@@ -12,6 +12,7 @@ import {
   FaUser,
   FaCog,
   FaSignOutAlt,
+  FaSignInAlt,
   FaBell,
   FaCreditCard,
   FaLock,
@@ -27,7 +28,7 @@ const MyIcons = (prop) => {
       return <FaCartShopping {...prop} />;
     //! -------------------- Case (signOut-1)
     case "signOut-1":
-      return <CiLogout {...prop} />;
+      return <FaSignOutAlt {...prop} />;
 
     //! -------------------- Case (user)
     case "user":

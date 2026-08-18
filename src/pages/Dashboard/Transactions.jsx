@@ -4,7 +4,7 @@ export default function Transactions() {
   //! ---------------------------------------- Return
   return (
     <>
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">تراکنش ها</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-6">Transactions</h1>
     </>
   );
 }

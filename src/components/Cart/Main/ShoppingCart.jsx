@@ -13,7 +13,7 @@ export default function ShoppingCart() {
     <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-md overflow-auto">
       {cart?.courses?.length === 0 ? (
         <div className="flex justify-center items-center w-full h-full">
-          هیچ آیتمی در سبد خرید شما وجود ندارد
+          There are no items in your cart.
         </div>
       ) : (
         <div className="space-y-4">
@@ -31,7 +31,7 @@ export default function ShoppingCart() {
                 <div>
                   <h2 className="font-semibold">{course?.title}</h2>
                   <p className="text-gray-500">
-                    قیمت واحد: {course.price.toLocaleString()} تومان
+                    Unit price: {course.price.toLocaleString()} Toman
                   </p>
                   <div className="flex justify-start items-center gap-1">
                     <button
@@ -58,16 +58,16 @@ export default function ShoppingCart() {
                   </div>
                 </div>
               </div>
-              <div className="text-center">
+              <div className="text-center flex flex-col items-end justify-center">
                 <p className="text-lg font-bold text-emerald-600">
-                  {(course.quantity * course.price).toLocaleString()} تومان
+                  {(course.quantity * course.price).toLocaleString()} Toman
                 </p>
                 <button
                   onClick={() => dispatch(deleted(course))}
                   className="cursor-pointer flex rounded items-center justify-center gap-2 text-white px-4 mt-3 py-2 text-sm bg-red-500 hover:text-gray-700 transition"
                 >
+                  <span>Remove</span>
                   <MyIcons type={"delete"} className="w-3 h-3" />
-                  <span>حذف از سبد خرید</span>
                 </button>
               </div>
             </div>

@@ -11,7 +11,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { loginValidation } from "/src/validations/loginValidationSchema";
 import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Component (Form)
-export default function LoginForm() {
+export default function () {
   //! ---------------------------------------- Hooks
   const {
     register,
@@ -41,38 +41,33 @@ export default function LoginForm() {
   return (
     <div className="p-8 sm:p-12">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-        ورود به حساب کاربری
+        Login to your account
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
         {/* Email */}
-        <div className="flex justify-center items-start flex-col w-full m-0 gap-1.5">
-          <span className="relative w-full">
-            <MyIcons type={"email"} className="svg-primary" />
-            <input
-              {...register("email")}
-              name="email"
-              type="email"
-              placeholder="ایمیل"
-              className="input-primary w-full"
-            />
-          </span>
-
+        <div className="relative w-full">
+          <MyIcons type={"email"} className="svg-primary" />
+          <input
+            {...register("email")}
+            name="email"
+            type="email"
+            placeholder="Email"
+            className="input-primary w-full"
+          />
           {errors?.email && (
             <p className="text-red-500 text-sm px-1">{errors?.email.message}</p>
           )}
         </div>
         {/* Password */}
-        <div className="relative">
-          <span className="relative w-full">
-            <MyIcons type={"password"} className="svg-primary" />
-            <input
-              {...register("password")}
-              name="password"
-              type="password"
-              placeholder="رمز عبور"
-              className="input-primary"
-            />
-          </span>
+        <div className="relative w-full">
+          <MyIcons type={"password"} className="svg-primary" />
+          <input
+            {...register("password")}
+            name="password"
+            type="password"
+            placeholder="Password"
+            className="input-primary w-full"
+          />
 
           {errors?.password && (
             <p className="text-red-500 text-sm px-1">
@@ -89,9 +84,9 @@ export default function LoginForm() {
         <div className="flex justify-between text-sm text-gray-500">
           <label className="flex items-center gap-1">
             <input type="checkbox" className="accent-blue-600" />
-            مرا به خاطر بسپار
+            Remember me.
           </label>
-          <Link className="hover:text-blue-600">فراموشی رمز؟</Link>
+          <Link className="hover:text-blue-600">Forgot password?</Link>
         </div>
 
         <button
@@ -99,13 +94,13 @@ export default function LoginForm() {
           type="submit"
           className={`btn-primary w-full py-2 ${isPending ? "cursor-auto" : "cursor-pointer"}`}
         >
-          {isPending ? `درحال ارسال اطلاعات...` : `ورود به حساب`}
+          {isPending ? `Sending information...` : `Login`}
         </button>
 
         <div className="text-center text-sm text-gray-600">
-          حساب نداری؟
+          Don't you have an account?
           <Link to={"/register"} className="text-blue-600 hover:underline">
-            {` ثبت‌ نام کن`}
+            {` Register`}
           </Link>
         </div>
       </form>

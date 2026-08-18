@@ -4,7 +4,7 @@ import * as yup from "yup";
 export const loginValidation = yup.object().shape({
   email: yup
     .string()
-    .required("لطفا ایمیل خود را وارد نمایید.")
-    .email("لطفا ایمیل معتبر وارد نمایید."),
-  password: yup.string().required("لطفا رمز عبور خود را وارد نمایید."),
+    .required("Please enter your email.")
+    .email("Please enter a valid email."),
+  password: yup.string().required("Please enter your password."),
 });

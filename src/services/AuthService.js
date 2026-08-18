@@ -10,7 +10,7 @@ export async function userLoginFn({ data: formdata }) {
     `${url}?email=${encodeURIComponent(typedEmail)}&password=${encodeURIComponent(typedPassword)}`,
   );
   if (user?.length === 0) {
-    throw new Error("ایمیل یا رمز عبور اشتباه است");
+    throw new Error("Email or password is wrong");
   }
   const { email, password, role, purchasedCourses, ...blockedData } =
     user && user[0];
@@ -25,7 +25,7 @@ export async function userRegisterFn({ data }) {
   const { data: users, status: getStatus } = await axiosInstance.get(url);
   const exist = users?.find((user) => user.email === email);
   if (exist) {
-    throw new Error("کاربر با این ایمیل وجود دارد");
+    throw new Error("User with this email exists.");
   }
   //! Post
   const { data: user, status: postStatus } = await axiosInstance.post(url, {

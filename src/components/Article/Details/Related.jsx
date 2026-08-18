@@ -8,7 +8,7 @@ export default function Related({ article = undefined }) {
   //! ---------------------------------------- Return
   return (
     <div className="border-t pt-6 mt-6 flex flex-col gap-3">
-      <h3 className="text-xl font-bold text-blue-700">مقالات مرتبط</h3>
+      <h3 className="text-xl font-bold text-blue-700">Related articles</h3>
       <ul className="flex justify-between items-center gap-3 w-full">
         {article
           ? article?.related?.map((relation) => (

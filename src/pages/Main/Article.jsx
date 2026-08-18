@@ -16,11 +16,11 @@ export default function Article() {
   return (
     <div className="w-4/5 mx-auto min-h-[30rem] bg-gray-200 rounded-3xl flex-grow flex flex-col text-gray-800 p-5 my-15">
       <div className="text-center mb-10">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">
-          همه مقالات
+        <h1 className="text-3xl font-extrabold mb-2 text-center">
+          All articles
         </h1>
         <p className="text-gray-500 text-sm sm:text-base">
-          جدیدترین و کاربردی‌ترین مقالات برنامه‌نویسی را اینجا بخوان
+          Read the latest and most useful programming articles here.
         </p>
       </div>
 
@@ -31,7 +31,7 @@ export default function Article() {
         />
         <input
           type="text"
-          placeholder="جستجو در مقالات..."
+          placeholder="Search articles..."
           className="w-full py-3 pr-10 pl-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
         />
       </div>

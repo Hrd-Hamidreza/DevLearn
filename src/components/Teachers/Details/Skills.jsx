@@ -7,7 +7,7 @@ export default function Skills({ teacher = undefined }) {
   return (
     <div className="flex flex-col gap-3">
       <h3 className="text-xl font-semibold text-blue-700 mb-4">
-        مهارت‌ها و تخصص‌ها
+        Skills and Specialties
       </h3>
       <ul className="flex gap-3">
         {teacher

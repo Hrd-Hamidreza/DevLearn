@@ -19,7 +19,7 @@ export default function Profile({ teacher = undefined }) {
         )}
       </div>
       <div className="flex flex-col gap-5 w-full">
-        <div className="text-2xl font-bold text-gray-800 relative xl:min-h-10 w-1/4">
+        <div className="text-2xl font-bold text-gray-800 relative xl:min-h-10 w-2/4">
           {teacher ? <h2>{teacher?.name}</h2> : <div className="skeleton" />}
         </div>
         <div className="text-gray-600 leading-loose whitespace-pre-line relative xl:min-h-5">
