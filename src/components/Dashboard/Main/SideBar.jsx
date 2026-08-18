@@ -1,20 +1,12 @@
 //! ---------------------------------------- Import
-import {
-  FaBook,
-  FaUser,
-  FaCog,
-  FaSignOutAlt,
-  FaBell,
-  FaCreditCard,
-} from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getMenueItemsDataFn } from "/src/services/menuItemService";
 import { logOut } from "/src/features/user/userSlice";
 import { useEffect, useState } from "react";
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Variables
-const iconMap = { FaBook, FaUser, FaCog, FaSignOutAlt, FaBell, FaCreditCard };
 const skeletonCount = 6;
 //! ---------------------------------------- Component (SideBar)
 export default function SideBar() {
@@ -73,14 +65,13 @@ export default function SideBar() {
         ) : (
           <>
             {items?.map((item) => {
-              const Icon = iconMap[item.icon];
               return (
                 <NavLink
                   key={item.id}
                   to={item.path}
                   className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-100"
                 >
-                  <Icon />
+                  <MyIcons type={item.path} />
                   <span>{item.title}</span>
                 </NavLink>
               );
@@ -89,7 +80,7 @@ export default function SideBar() {
               onClick={exit}
               className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-red-400 w-full"
             >
-              <FaSignOutAlt />
+              <MyIcons type={`signOut-2`} />
               <span>خروج</span>
             </button>
           </>

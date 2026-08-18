@@ -1,7 +1,5 @@
 //! ---------------------------------------- Import
-import { FaUser } from "react-icons/fa";
-import { MdOutlineDateRange } from "react-icons/md";
-import { FaTag } from "react-icons/fa6";
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Component (Info)
 export default function Info({ article = undefined }) {
   //! ---------------------------------------- Return
@@ -12,7 +10,7 @@ export default function Info({ article = undefined }) {
       </div>
       <div className="flex w-3/6 gap-1 text-sm text-gray-600 items-center">
         <div className="flex items-center gap-2 w-full">
-          <FaUser />
+          <MyIcons type={"user"} />
           <div className="relative xl:min-h-5 w-1/2">
             {article ? (
               <span className="w-full flex">{article?.author?.name}</span>
@@ -22,7 +20,7 @@ export default function Info({ article = undefined }) {
           </div>
         </div>
         <div className="flex items-center gap-2 w-full">
-          <MdOutlineDateRange />
+          <MyIcons type={"date"} />
           <div className="relative xl:min-h-5 w-1/2">
             {article ? (
               <span className="w-full flex">{article?.date}</span>
@@ -32,7 +30,7 @@ export default function Info({ article = undefined }) {
           </div>
         </div>
         <div className="flex items-center gap-2 w-full">
-          <FaTag />
+          <MyIcons type={"category"} />
           <div className="relative xl:min-h-5 w-1/2">
             {article ? (
               <span className="w-full flex">{article?.category}</span>

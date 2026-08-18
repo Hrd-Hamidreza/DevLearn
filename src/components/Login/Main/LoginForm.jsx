@@ -1,20 +1,17 @@
 //! ---------------------------------------- Import
 //! ---------------------------------------- npm install react-hook-form @hookform/resolvers yup
-import { FaLock, FaEnvelope, FaUserAlt } from "react-icons/fa";
-import { use, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useDispatch } from "react-redux";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { userLoginFn } from "/src/services/AuthService";
 import { login } from "/src/features/user/userSlice";
 import PremiumLoader from "/src/components/Loader/PremiumLoader";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginValidation } from "/src/validations/loginValidationSchema";
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Component (Form)
 export default function LoginForm() {
-  //! ---------------------------------------- Redux
-  const { cart, account } = useSelector((store) => store);
   //! ---------------------------------------- Hooks
   const {
     register,
@@ -50,7 +47,7 @@ export default function LoginForm() {
         {/* Email */}
         <div className="flex justify-center items-start flex-col w-full m-0 gap-1.5">
           <span className="relative w-full">
-            <FaEnvelope className="svg-primary" />
+            <MyIcons type={"email"} className="svg-primary" />
             <input
               {...register("email")}
               name="email"
@@ -67,7 +64,7 @@ export default function LoginForm() {
         {/* Password */}
         <div className="relative">
           <span className="relative w-full">
-            <FaLock className="svg-primary" />
+            <MyIcons type={"password"} className="svg-primary" />
             <input
               {...register("password")}
               name="password"

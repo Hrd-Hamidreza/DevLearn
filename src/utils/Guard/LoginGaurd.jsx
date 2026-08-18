@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 //! ---------------------------------------- Component (ProtectedEntrance)
 export default function LoginGaurd({ children }) {
   //! ---------------------------------------- Redux
-  const { cart, account } = useSelector((store) => store);
+  const { account } = useSelector((store) => store);
   //! ---------------------------------------- Rest
-  const userInfo = Object.keys(account.user).includes("id");
+  const userInfo = Object.keys(account?.user).includes("id");
   //! ---------------------------------------- Return
   if (userInfo) {
     return <Navigate to={`/dashboard`} />;

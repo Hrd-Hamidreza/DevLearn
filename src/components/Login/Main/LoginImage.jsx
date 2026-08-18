@@ -1,5 +1,4 @@
 //! ---------------------------------------- Import
-import { FaLock, FaEnvelope, FaUserAlt } from "react-icons/fa";
 //! ---------------------------------------- Component (Image)
 export default function LoginImage() {
   //! ---------------------------------------- Return

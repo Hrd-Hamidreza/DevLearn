@@ -1,7 +1,6 @@
 //! ---------------------------------------- Import
 import { yupResolver } from "@hookform/resolvers/yup";
 import { set, useForm } from "react-hook-form";
-import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { userRegisterFn } from "/src/services/AuthService";
@@ -9,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "/src/features/user/userSlice";
 import { registerValidation } from "/src/validations/registerValidationSchema";
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Component (RegisterForm)
 export default function RegisterForm() {
   //! ---------------------------------------- Hooks
@@ -61,7 +61,7 @@ export default function RegisterForm() {
       {/* Form */}
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
         <div className="relative">
-          <FaUser className="svg-primary" />
+          <MyIcons type={"user"} className="svg-primary" />
           <input
             {...register("name")}
             name="name"
@@ -76,7 +76,7 @@ export default function RegisterForm() {
         )}
 
         <div className="relative">
-          <FaEnvelope className="svg-primary" />
+          <MyIcons type={"email"} className="svg-primary" />
           <input
             {...register("email")}
             name="email"
@@ -91,7 +91,7 @@ export default function RegisterForm() {
         )}
 
         <div className="relative">
-          <FaLock className="svg-primary" />
+          <MyIcons type={"password"} className="svg-primary" />
           <input
             {...register("password")}
             name="password"
@@ -108,7 +108,7 @@ export default function RegisterForm() {
         )}
 
         <div className="relative">
-          <FaLock className="svg-primary" />
+          <MyIcons type={"password"} className="svg-primary" />
           <input
             {...register("rePassword")}
             name="rePassword"

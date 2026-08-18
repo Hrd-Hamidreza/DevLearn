@@ -1,5 +1,4 @@
 //! ---------------------------------------- Import
-import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 //! ---------------------------------------- Component (Image)
 export default function RegisterImage() {
   //! ---------------------------------------- Return

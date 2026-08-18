@@ -1,7 +1,6 @@
 //! ---------------------------------------- Import
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Variables
-const iconMap = { FaInstagram, FaLinkedin, FaTwitter };
 const skeletonCount = 3;
 //! ---------------------------------------- Component (Profile)
 export default function Profile({ teacher = undefined }) {
@@ -29,7 +28,6 @@ export default function Profile({ teacher = undefined }) {
         <ul className="flex gap-4 text-xl text-gray-600 w-1/2">
           {teacher
             ? teacher?.social?.map((media) => {
-                const Icon = iconMap[media.icon];
                 return (
                   <a
                     key={media?.id}
@@ -37,7 +35,8 @@ export default function Profile({ teacher = undefined }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Icon
+                    <MyIcons
+                      type={media.name}
                       className={`${media?.name === "instagram" ? " hover:text-pink-700 " : media?.name === "linkedin" ? "hover:text-blue-700" : "hover:text-blue-400"} transition`}
                     />
                   </a>

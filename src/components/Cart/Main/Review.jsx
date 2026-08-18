@@ -1,15 +1,17 @@
 //! ---------------------------------------- Import
 import { useSelector } from "react-redux";
-import store from "/src/app/store";
+import { useMemo } from "react";
 //! ---------------------------------------- Component (Review)
 export default function Review() {
   //! ---------------------------------------- Redux
-  const { cart, account } = useSelector((store) => store);
+  const { cart } = useSelector((store) => store);
   //! ---------------------------------------- Hooks
-  const total = cart.courses.reduce(
-    (scratch, product) => scratch + product.price * product.quantity,
-    0,
-  );
+  const total = useMemo(() => {
+    return cart?.courses?.reduce(
+      (scratch, product) => scratch + product.price * product.quantity,
+      0,
+    );
+  }, [cart?.courses]);
   //! ---------------------------------------- Return
   return (
     <div className="bg-white rounded-2xl p-5 shadow-md h-full flex flex-col justify-between items-center">
@@ -20,9 +22,9 @@ export default function Review() {
       <div className="flex w-full justify-between text-gray-600 text-xl">
         <span>تعداد آیتم‌ها:</span>
         <span>
-          {cart.courses.length !== 0
-            ? cart.courses.length + " عدد"
-            : cart.courses.length}
+          {cart?.courses?.length !== 0
+            ? cart?.courses?.length + " عدد"
+            : cart?.courses?.length}
         </span>
       </div>
 

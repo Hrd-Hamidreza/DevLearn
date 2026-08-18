@@ -1,34 +1,35 @@
 //! ---------------------------------------- Import
-import { FaTrash } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { quantity, deleted } from "/src/features/cart/cartSlice";
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Component (ShoppingCart)
 export default function ShoppingCart() {
   //! ---------------------------------------- Redux
-  const { cart, account } = useSelector((store) => store);
+  const { cart } = useSelector((store) => store);
+  //! ---------------------------------------- Hooks
   const dispatch = useDispatch();
   //! ---------------------------------------- Return
   return (
     <div className="lg:col-span-2 bg-white rounded-2xl p-5 shadow-md overflow-auto">
-      {cart.courses.length === 0 ? (
+      {cart?.courses?.length === 0 ? (
         <div className="flex justify-center items-center w-full h-full">
           هیچ آیتمی در سبد خرید شما وجود ندارد
         </div>
       ) : (
         <div className="space-y-4">
-          {cart.courses.map((course, idx) => (
+          {cart?.courses?.map((course, idx) => (
             <div
-              key={course.id}
+              key={course?.id}
               className={`flex items-center justify-between ${idx !== cart.courses.length - 1 ? "border-b" : ""}  pb-4`}
             >
               <div className="flex items-center gap-4">
                 <img
-                  src={course.image}
-                  alt={course.title}
+                  src={course?.image}
+                  alt={course?.title}
                   className="w-20 h-20 rounded-xl object-cover"
                 />
                 <div>
-                  <h2 className="font-semibold">{course.title}</h2>
+                  <h2 className="font-semibold">{course?.title}</h2>
                   <p className="text-gray-500">
                     قیمت واحد: {course.price.toLocaleString()} تومان
                   </p>
@@ -65,7 +66,7 @@ export default function ShoppingCart() {
                   onClick={() => dispatch(deleted(course))}
                   className="cursor-pointer flex rounded items-center justify-center gap-2 text-white px-4 mt-3 py-2 text-sm bg-red-500 hover:text-gray-700 transition"
                 >
-                  <FaTrash className="w-3 h-3" />
+                  <MyIcons type={"delete"} className="w-3 h-3" />
                   <span>حذف از سبد خرید</span>
                 </button>
               </div>

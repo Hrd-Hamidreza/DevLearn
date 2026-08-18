@@ -10,7 +10,7 @@ const skeletonCount = 4;
 //! ---------------------------------------- Component (Courses)
 export default function Courses() {
   //! ---------------------------------------- Redux
-  const { cart, account } = useSelector((store) => store);
+  const { account } = useSelector((store) => store);
   //! ---------------------------------------- Query
   const { data: coursesData, isLoading: coursesLoading } = useQuery({
     queryKey: ["my-courses"],

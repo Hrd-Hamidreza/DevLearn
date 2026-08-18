@@ -1,5 +1,4 @@
 //! ---------------------------------------- Import
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import NotFound from "/src/pages/Main/NotFound";
 import Profile from "/src/components/Teachers/Details/Profile";
@@ -13,7 +12,7 @@ export default function TeacherDetails() {
   const { id } = useParams();
   //! ---------------------------------------- Query
   const { data: teacher, isLoading } = useQuery({
-    queryKey: ["teacher"],
+    queryKey: [`teacher-${id}`],
     queryFn: () => getTeacherDataByIdFn(id),
   });
   //! ---------------------------------------- Return

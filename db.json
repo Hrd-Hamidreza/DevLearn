@@ -321,33 +321,33 @@
   "menuItems": [
     {
       "id": 1,
-      "path": "profile",
       "title": "پروفایل",
+      "path": "profile",
       "icon": "FaBook",
       "active": true
     },
     {
       "id": 2,
-      "path": "courses",
       "title": "دوره‌های من",
+      "path": "courses",
       "icon": "FaUser"
     },
     {
       "id": 3,
-      "path": "transactions",
       "title": "تراکنش‌ها",
+      "path": "transactions",
       "icon": "FaCog"
     },
     {
       "id": 4,
-      "path": "notifications",
       "title": "اعلان‌ها",
+      "path": "notifications",
       "icon": "FaCreditCard"
     },
     {
       "id": 5,
-      "path": "settings",
       "title": "تنظیمات",
+      "path": "settings",
       "icon": "FaBell"
     }
   ],

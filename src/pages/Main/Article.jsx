@@ -1,8 +1,8 @@
 //! ---------------------------------------- Import
-import { FaSearch } from "react-icons/fa";
 import ArticleCard from "/src/components/Cards/ArticleCard";
 import { useQuery } from "@tanstack/react-query";
 import { getArticlesDataFn } from "/src/services/articleService";
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Variables
 const skeletonCount = 3;
 //! ---------------------------------------- Component (Article)
@@ -25,7 +25,10 @@ export default function Article() {
       </div>
 
       <div className="max-w-xl mx-auto mb-8 relative">
-        <FaSearch className="absolute right-4 top-3.5 text-gray-400" />
+        <MyIcons
+          type={"search"}
+          className="absolute right-4 top-3.5 text-gray-400"
+        />
         <input
           type="text"
           placeholder="جستجو در مقالات..."

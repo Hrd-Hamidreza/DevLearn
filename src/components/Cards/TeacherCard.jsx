@@ -1,8 +1,6 @@
 //! ---------------------------------------- Import
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-//! ---------------------------------------- Variables
-const iconsMap = { FaInstagram, FaLinkedin, FaTwitter };
+import MyIcons from "/src/components/Icons/MyIcons";
 //! ---------------------------------------- Component (TeacherCard)
 export default function TeacherCard({ teacher = undefined }) {
   //! ---------------------------------------- Return
@@ -23,7 +21,6 @@ export default function TeacherCard({ teacher = undefined }) {
           <p className="text-gray-600 mb-4">{teacher?.bio}</p>
           <div className="flex gap-4 text-blue-600 text-lg">
             {teacher.social.map((media) => {
-              const Icon = iconsMap[media.icon];
               return (
                 <a
                   key={media?.id}
@@ -32,7 +29,7 @@ export default function TeacherCard({ teacher = undefined }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon />
+                  <MyIcons type={media.name} />
                 </a>
               );
             })}

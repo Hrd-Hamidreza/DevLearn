@@ -1,12 +1,4 @@
 //! ---------------------------------------- Import
-import {
-  FaBook,
-  FaUser,
-  FaCog,
-  FaSignOutAlt,
-  FaBell,
-  FaCreditCard,
-} from "react-icons/fa";
 import { Outlet } from "react-router-dom";
 //! ---------------------------------------- Component (Focused)
 export default function Focused() {
