@@ -1,5 +1,4 @@
 //! ---------------------------------------- Import
-import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "/src/pages/Main/Home";
 import Course from "/src/pages/Main/Course";
@@ -16,7 +15,9 @@ import ArticleDetails from "/src/pages/Main/ArticleDetails";
 import TeacherDetails from "/src/pages/Main/TeacherDetails";
 import CourseCard from "/src/components/Cards/CourseCard";
 import MainPeak from "/src/pages/Main/MainPeak";
-import ProtectedEntrance from "/src/utils/Guard/ProtectedEntrance";
+import RegisterGaurd from "/src/utils/Guard/RegisterGaurd";
+import LoginGaurd from "/src/utils/Guard/LoginGaurd";
+import DashboardGaurd from "/src/utils/Guard/DashboardGaurd";
 import Courses from "/src/pages/Dashboard/Courses";
 import Profile from "/src/pages/Dashboard/Profile";
 import Settings from "/src/pages/Dashboard/Settings";
@@ -24,6 +25,7 @@ import Transactions from "/src/pages/Dashboard/Transactions";
 import Notifications from "/src/pages/Dashboard/Notifications";
 //! ---------------------------------------- Component (Router)
 export default function Router() {
+  //! ---------------------------------------- Return
   return (
     <BrowserRouter>
       <Routes>
@@ -40,25 +42,25 @@ export default function Router() {
           <Route
             path="register"
             element={
-              <ProtectedEntrance type={"register"}>
+              <RegisterGaurd>
                 <Register />
-              </ProtectedEntrance>
+              </RegisterGaurd>
             }
           />
           <Route
             path="login"
             element={
-              <ProtectedEntrance type={"login"}>
+              <LoginGaurd>
                 <Login />
-              </ProtectedEntrance>
+              </LoginGaurd>
             }
           />
           <Route
             path="dashboard"
             element={
-              <ProtectedEntrance type={"dashboard"}>
+              <DashboardGaurd>
                 <Dashboard />
-              </ProtectedEntrance>
+              </DashboardGaurd>
             }
           >
             <Route index element={<Navigate to={"profile"} replace />} />

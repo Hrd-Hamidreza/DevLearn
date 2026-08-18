@@ -14,11 +14,17 @@
 
 /*! --------- Components */
 @layer components {
-    @import "/src/styles/components/_buttons.scss";
-    @import "/src/styles/components/_inputs.scss";
-    @import "/src/styles/pages/_all.scss";
-    @import "/src/styles/pages/_dashboard.scss";
+    @import "./styles/components/_buttons.scss";
+    @import "./styles/components/_inputs.scss";
+    @import "./styles/pages/_all.scss";
+    @import "./styles/pages/_dashboard.scss";
 }
 
 /*! --------- Utilities */
 @layer utilities {}
+
+/*! --------- Utilities */
+/*! --------- Utility */
+@utility skeleton {
+    @apply absolute inset-0 bg-gray-400 text-gray-400 animate-pulse;
+}

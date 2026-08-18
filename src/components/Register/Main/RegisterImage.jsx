@@ -1,7 +1,8 @@
 //! ---------------------------------------- Import
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 //! ---------------------------------------- Component (Image)
-export default function Image() {
+export default function RegisterImage() {
+  //! ---------------------------------------- Return
   return (
     <div className="hidden md:flex bg-gradient-to-tr from-blue-500 to-indigo-600 p-10 text-white relative">
       <div>

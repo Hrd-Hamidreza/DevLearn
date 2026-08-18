@@ -1,15 +1,17 @@
 //! ---------------------------------------- Import
 //! ---------------------------------------- Component (Head)
-export default function Head({ chosen }) {
+export default function Head({ article = undefined }) {
   return (
-    <>
-      <div className="overflow-hidden rounded-2xl mb-6 shadow">
+    <div className="relative w-full h-144 overflow-hidden">
+      {article ? (
         <img
-          alt={chosen.title}
-          className="w-full h-75 object-fill"
-          src={chosen.cover}
+          src={article?.cover}
+          alt={article?.title}
+          className="w-full h-full object-cover"
         />
-      </div>
-    </>
+      ) : (
+        <div className="skeleton" />
+      )}
+    </div>
   );
 }

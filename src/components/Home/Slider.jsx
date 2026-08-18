@@ -1,7 +1,17 @@
 //! ---------------------------------------- Import
-import categories from "/src/data/categories";
+import { useQuery } from "@tanstack/react-query";
+import CategoriesCard from "/src/components/Cards/CategoriesCard";
+import { getCategoriesDataFn } from "/src/services/categoryService";
+//! ---------------------------------------- Variables
+const skeletonCount = 5;
 //! ---------------------------------------- Component (Slider)
 export default function Slider() {
+  //! ---------------------------------------- Query
+  const { data: categories, isLoading } = useQuery({
+    queryKey: ["categories"],
+    queryFn: getCategoriesDataFn,
+  });
+  //! ---------------------------------------- Return
   return (
     <>
       {/* Hero Banner */}
@@ -18,14 +28,13 @@ export default function Slider() {
       <section className="py-16 px-4 max-w-6xl mx-auto">
         <h3 className="text-2xl font-bold mb-6">دسته‌بندی‌ها</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              className="bg-white shadow rounded p-4 text-center hover:bg-blue-50 cursor-pointer"
-            >
-              {category.name}
-            </div>
-          ))}
+          {isLoading
+            ? Array.from({ length: skeletonCount }).map((_, index) => (
+                <CategoriesCard key={index} />
+              ))
+            : categories?.map((category) => (
+                <CategoriesCard key={category?.id} {...{ category }} />
+              ))}
         </div>
       </section>
     </>

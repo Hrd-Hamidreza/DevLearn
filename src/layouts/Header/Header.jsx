@@ -6,21 +6,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "/src/features/user/userSlice";
 //! ---------------------------------------- Component (Header)
 export default function Header() {
+  //! ---------------------------------------- Redux
   const { cart, account } = useSelector((store) => store);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  //! ---------------------------------------- Functions
   const exit = (event) => {
     dispatch(logOut());
     navigate("login");
   };
+  //! ---------------------------------------- Return
   return (
     <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center h-[4rem] fixed top-0 left-0 right-0 z-100">
+      {/* Logo */}
       <Link
         to={"/"}
         className="text-2xl font-bold text-blue-600 cursor-pointer"
       >
         DevLearn
       </Link>
+      {/* NavBar */}
       <div className="flex justify-between items-center w-5/8">
         <nav className="flex gap-7 md:flex">
           <NavLink to={"/"} className="hover:text-blue-600">
@@ -39,17 +44,17 @@ export default function Header() {
             درباره ما
           </NavLink>
         </nav>
-
+        {/* Shop */}
         <div className="flex items-center gap-2">
           {/* سبد خرید */}
           <Link to={"cart"} className="relative cursor-pointer">
             <FaCartShopping className="text-2xl" />
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-              {cart.courses.length}
+              {cart?.courses?.length}
             </span>
           </Link>
           {/* دکمه‌ها */}
-          {account.user.name ? (
+          {account?.user?.name ? (
             <>
               <Link
                 to={`/dashboard`}
@@ -57,9 +62,9 @@ export default function Header() {
               >
                 <img
                   className="rounded-full flex w-6 h-6 object-contain"
-                  src={account.user.avatar}
+                  src={account?.user?.avatar}
                 />
-                <span className="flex">{`${account.user.name} عزیز خوش آمدید.`}</span>
+                <span className="flex">{`${account?.user?.name} عزیز خوش آمدید.`}</span>
               </Link>
               <CiLogout
                 onClick={(event) => exit(event)}

@@ -8,7 +8,7 @@ import {
   FaCreditCard,
 } from "react-icons/fa";
 import { Outlet } from "react-router-dom";
-//! ---------------------------------------- Component (Dashboard)
+//! ---------------------------------------- Component (Focused)
 export default function Focused() {
   return (
     <main className="flex-1 p-6">
