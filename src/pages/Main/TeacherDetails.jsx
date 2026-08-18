@@ -13,7 +13,7 @@ export default function TeacherDetails() {
   const { id } = useParams();
   //! ---------------------------------------- Query
   const { data: teacher, isLoading } = useQuery({
-    queryKey: ["teacher"],
+    queryKey: [`teacher-${id}`],
     queryFn: () => getTeacherDataByIdFn(id),
   });
   //! ---------------------------------------- Return

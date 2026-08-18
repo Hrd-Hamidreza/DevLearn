@@ -14,7 +14,7 @@ export default function ArticleDetails() {
   const { id } = useParams();
   //! ---------------------------------------- Query
   const { data: article, isLoading } = useQuery({
-    queryKey: ["article"],
+    queryKey: [`article-${id}`],
     queryFn: () => getArticleDataByIdFn(id),
   });
   //! ---------------------------------------- Return

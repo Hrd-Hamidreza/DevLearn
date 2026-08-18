@@ -15,7 +15,7 @@ export default function CourseDetails() {
   const { id } = useParams();
   //! ---------------------------------------- Query
   const { data: course, isLoading } = useQuery({
-    queryKey: ["course"],
+    queryKey: [`course-${id}`],
     queryFn: () => getCourseDataByIdFn(id),
   });
   //! ---------------------------------------- Return
