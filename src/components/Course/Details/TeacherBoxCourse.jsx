@@ -16,14 +16,14 @@ export default function TeacherBoxCourse({ course = undefined }) {
         )}
       </div>
       <div className="w-full flex flex-col gap-2">
-        <div className="relative text-lg font-semibold w-1/12 xl:min-h-5">
+        <div className="relative text-lg font-semibold w-1/4 xl:min-h-5">
           {course ? (
             <h4>{course?.teacher?.name}</h4>
           ) : (
             <div className="skeleton" />
           )}
         </div>
-        <div className="relative text-sm text-gray-500 w-1/2 xl:min-h-5">
+        <div className="relative text-sm text-gray-500 w-3/4 xl:min-h-5">
           {course ? (
             <p>{course?.teacher?.bio}</p>
           ) : (
