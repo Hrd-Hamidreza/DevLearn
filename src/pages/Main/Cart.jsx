@@ -1,9 +1,9 @@
 //! ---------------------------------------- Import
-import React from "react";
 import ShoppingCart from "/src/components/Cart/Main/ShoppingCart";
 import Review from "/src/components/Cart/Main/Review";
 //! ---------------------------------------- Component (Cart)
-const Cart = () => {
+export default function Cart() {
+  //! ---------------------------------------- Return
   return (
     <div className="min-h-fit bg-gray-200 rounded-3xl flex-grow w-6xl flex flex-col mx-auto text-gray-800 p-5 my-15">
       <h1 className="text-2xl md:text-3xl font-bold mb-6">🛒 سبد خرید شما</h1>
@@ -15,6 +15,4 @@ const Cart = () => {
       </div>
     </div>
   );
-};
-
-export default Cart;
+}

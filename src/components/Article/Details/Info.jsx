@@ -3,24 +3,45 @@ import { FaUser } from "react-icons/fa";
 import { MdOutlineDateRange } from "react-icons/md";
 import { FaTag } from "react-icons/fa6";
 //! ---------------------------------------- Component (Info)
-export default function Info({ chosen }) {
+export default function Info({ article = undefined }) {
+  //! ---------------------------------------- Return
   return (
-    <>
-      <h2 className="text-3xl font-bold text-gray-800 mb-3">{chosen.title}</h2>
-      <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-6 items-center">
-        <div className="flex items-center gap-2">
+    <div className="flex flex-col gap-3">
+      <div className="relative text-3xl font-bold text-gray-800 xl:min-h-20">
+        {article ? <h2>{article?.title}</h2> : <div className="skeleton" />}
+      </div>
+      <div className="flex w-3/6 gap-1 text-sm text-gray-600 items-center">
+        <div className="flex items-center gap-2 w-full">
           <FaUser />
-          <span>{chosen.author.name}</span>
+          <div className="relative xl:min-h-5 w-1/2">
+            {article ? (
+              <span className="w-full flex">{article?.author?.name}</span>
+            ) : (
+              <div className="skeleton" />
+            )}
+          </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full">
           <MdOutlineDateRange />
-          <span>{chosen.date}</span>
+          <div className="relative xl:min-h-5 w-1/2">
+            {article ? (
+              <span className="w-full flex">{article?.date}</span>
+            ) : (
+              <div className="skeleton" />
+            )}
+          </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full">
           <FaTag />
-          <span>{chosen.category}</span>
+          <div className="relative xl:min-h-5 w-1/2">
+            {article ? (
+              <span className="w-full flex">{article?.category}</span>
+            ) : (
+              <div className="skeleton" />
+            )}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

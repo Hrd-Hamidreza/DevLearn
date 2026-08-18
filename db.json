@@ -1,0 +1,528 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما",
+      "cover": "/images/blog/git.jpg",
+      "author": {
+        "name": "علی رضایی",
+        "avatar": "/images/teachers/men.jpg"
+      },
+      "date": "۱۴۰۴/۰۴/۱۰",
+      "dateISO": "2025-07-01",
+      "category": "برنامه‌نویسی",
+      "introduction": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما",
+      "content": "اگر برنامه‌نویس هستید و می‌خواهید سرعت کدنویسی و کیفیت کارتان را ارتقا دهید، این مقاله برای شماست.\n\nدر این مطلب، به معرفی ۵ راهکار کاربردی و حرفه‌ای برای افزایش عملکرد برنامه‌نویسان پرداخته‌ایم.",
+      "samples": [
+        "استفاده از میانبرهای کیبورد",
+        "مدیریت زمان با تکنیک پومودورو",
+        "یادگیری ابزارهای توسعه مثل Git, Docker ",
+        "کدنویسی تمیز با اصول SOLID",
+        "تمرین منظم با پروژه‌های واقعی"
+      ],
+      "tags": ["بهره‌وری", "کدنویسی", "SOLID", "برنامه‌نویسی"],
+      "related": [
+        {
+          "id": 2,
+          "title": "چگونه با پروژه واقعی یادگیری را عمیق‌تر کنیم؟",
+          "cover": "/images/blog/react.webp",
+          "slug": "deep-learning-projects"
+        },
+        {
+          "id": 3,
+          "title": "راهنمای کامل استفاده از Git در تیم‌های حرفه‌ای",
+          "cover": "/images/blog/js.png",
+          "slug": "git-guide"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "چگونه با پروژه واقعی یادگیری را عمیق‌تر کنیم؟",
+      "cover": "/images/blog/react.webp",
+      "author": {
+        "name": "زهرا کریمی",
+        "avatar": "/images/teachers/woman1.jpg"
+      },
+      "date": "۱۴۰۴/۰۳/۲۵",
+      "dateISO": "2025-06-15",
+      "introduction": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما ",
+      "category": "آموزش",
+      "content": "یادگیری برنامه‌نویسی تنها با خواندن کتاب‌ها و مقالات ممکن است کافی نباشد.\n\nدر این مقاله، به اهمیت کار روی پروژه‌های واقعی و کاربردی اشاره شده است.\n\nمزایا:\n\n- ایجاد نمونه‌کار قوی برای رزومه\n- درک بهتر مفاهیم برنامه‌نویسی\n- تقویت مهارت حل مسئله\n- افزایش اعتماد به نفس",
+      "samples": [
+        "ایجاد نمونه‌کار قوی برای رزومه",
+        "درک بهتر مفاهیم",
+        "تقویت مهارت حل مسئله",
+        "افزایش اعتماد به نفس"
+      ],
+      "tags": ["پروژه", "آموزش", "یادگیری"],
+      "related": [
+        {
+          "id": 1,
+          "title": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما",
+          "cover": "/images/blog/git.jpg",
+          "slug": "programming-performance"
+        },
+        {
+          "id": 3,
+          "title": "راهنمای کامل استفاده از Git در تیم‌های حرفه‌ای",
+          "cover": "/images/blog/js.png",
+          "slug": "git-guide"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "راهنمای کامل استفاده از Git در تیم‌های حرفه‌ای",
+      "cover": "/images/blog/js.png",
+      "author": {
+        "name": "حسن موسوی",
+        "avatar": "/images/teachers/men2.jpg"
+      },
+      "date": "۱۴۰۴/۰۲/۱۵",
+      "dateISO": "2025-05-05",
+      "introduction": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما ",
+      "category": "ابزار توسعه",
+      "content": "Git یکی از مهم‌ترین ابزارهای کنترل نسخه است که در تیم‌های حرفه‌ای برای مدیریت کد استفاده می‌شود.\n\nدر این مقاله، به مفاهیم پایه و نکات کلیدی در استفاده از Git پرداخته‌ایم.\n\nموارد مهم:\n\n- ایجاد شاخه (Branch)\n- ادغام شاخه‌ها (Merge)\n- مدیریت تعارض‌ها (Conflicts)\n- استفاده از Git Flow",
+      "samples": [
+        "ایجاد شاخه (Branch)",
+        "ادغام شاخه‌ها (Merge) ",
+        "مدیریت تعارض‌ها (Conflicts)",
+        "استفاده از Git Flow "
+      ],
+      "tags": ["Git", "کنترل نسخه", "ابزار توسعه"],
+      "related": [
+        {
+          "id": 1,
+          "title": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما",
+          "cover": "/images/blog/git.jpg",
+          "slug": "programming-performance"
+        },
+        {
+          "id": 2,
+          "title": "چگونه با پروژه واقعی یادگیری را عمیق‌تر کنیم؟",
+          "cover": "/images/blog/react.webp",
+          "slug": "deep-learning-projects"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "راهنمای کامل استفاده از React در تیم‌های حرفه‌ای",
+      "cover": "/images/blog/react.webp",
+      "author": {
+        "name": "دانیال جهانی",
+        "avatar": "/images/teachers/men2.jpg"
+      },
+      "date": "۱۴۰3/۰4/16",
+      "dateISO": "2024-02-20",
+      "introduction": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما ",
+      "category": "ابزار توسعه",
+      "content": "Git یکی از مهم‌ترین ابزارهای کنترل نسخه است که در تیم‌های حرفه‌ای برای مدیریت کد استفاده می‌شود.\n\nدر این مقاله، به مفاهیم پایه و نکات کلیدی در استفاده از Git پرداخته‌ایم.\n\nموارد مهم:\n\n- ایجاد شاخه (Branch)\n- ادغام شاخه‌ها (Merge)\n- مدیریت تعارض‌ها (Conflicts)\n- استفاده از Git Flow",
+      "samples": [
+        "ایجاد شاخه (Branch)",
+        "ادغام شاخه‌ها (Merge) ",
+        "مدیریت تعارض‌ها (Conflicts)",
+        "استفاده از Git Flow "
+      ],
+      "tags": ["React", "کنترل نسخه", "ابزار توسعه"],
+      "related": [
+        {
+          "id": 1,
+          "title": "۵ روش حرفه‌ای برای بهبود عملکرد برنامه‌نویسی شما",
+          "cover": "/images/blog/git.jpg",
+          "slug": "programming-performance"
+        },
+        {
+          "id": 2,
+          "title": "چگونه با پروژه واقعی یادگیری را عمیق‌تر کنیم؟",
+          "cover": "/images/blog/js.png",
+          "slug": "deep-learning-projects"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "فرانت‌اند"
+    },
+    {
+      "id": 2,
+      "name": "بک‌اند"
+    },
+    {
+      "id": 3,
+      "name": "امنیت"
+    },
+    {
+      "id": 4,
+      "name": "موبایل"
+    },
+    {
+      "id": 5,
+      "name": "هوش مصنوعی"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "quantity": 1,
+      "title": "آموزش جامع React از مقدماتی تا پیشرفته",
+      "categoryId": 2,
+      "price": 350000,
+      "description": "در این دوره، یاد می‌گیرید چگونه با React اپلیکیشن‌های مدرن، سریع و حرفه‌ای بسازید. از پایه شروع می‌کنیم تا ساخت پروژه‌های واقعی همراه با مفاهیم پیشرفته.",
+      "image": "/images/course/React.webp",
+      "level": "متوسط تا پیشرفته",
+      "duration": "۲۰ ساعت",
+      "teacherId": 1,
+      "teacher": {
+        "name": "محمد محمدی",
+        "avatar": "/images/teachers/1.webp",
+        "bio": "برنامه‌نویس فرانت‌اند و مدرس React با بیش از ۶ سال تجربه"
+      },
+      "outline": [
+        "آشنایی با JSX و کامپوننت‌ها",
+        "مدیریت state و props",
+        "استفاده از useEffect و lifecycle",
+        "مسیریابی با React Router",
+        "ساخت پروژه Todo App",
+        "اتصال به API و مدیریت درخواست‌ها",
+        "مباحث پیشرفته: Context, Custom Hooks, Performance",
+        "پروژه نهایی: پنل کاربری حرفه‌ای"
+      ]
+    },
+    {
+      "id": 2,
+      "quantity": 1,
+      "title": "دوره فوق‌ تخصصی PHP MVC",
+      "categoryId": 1,
+      "price": 1200000,
+      "description": "در این دوره از صفر شروع میکنیم و کامل PHP رو یاد میگیریم",
+      "image": "/images/course/php.webp",
+      "level": "مقدماتی تا پیشرفته",
+      "duration": "۳۰ ساعت",
+      "teacherId": 2,
+      "teacher": {
+        "name": "علیرضا حسینی",
+        "avatar": "/images/teachers/3.png",
+        "bio": "برنامه‌نویس بک‌اند با ۸ سال تجربه در توسعه وب و متخصص PHP"
+      },
+      "outline": [
+        "مبانی PHP و اصول برنامه‌نویسی",
+        "ساختار MVC چیست؟",
+        "ساخت یک فریمورک ساده MVC",
+        "پیاده‌سازی سیستم احراز هویت",
+        "اتصال به دیتابیس و ORM",
+        "ساخت پنل مدیریت با PHP MVC"
+      ]
+    },
+    {
+      "id": 3,
+      "quantity": 1,
+      "title": "دوره آموزشی گیت و گیت هاب",
+      "categoryId": 3,
+      "price": 850000,
+      "description": "در این دوره به صورت کامل گیت و گیت هاب رو یاد میگیریم",
+      "image": "/images/course/Git.webp",
+      "level": "مقدماتی",
+      "duration": "۸ ساعت",
+      "teacherId": 3,
+      "teacher": {
+        "name": "سارا محمدی",
+        "avatar": "/images/teachers/2.png",
+        "bio": "کارشناس DevOps با تجربه عملی در CI/CD و مدیریت پروژه با Git"
+      },
+      "outline": [
+        "مقدمه‌ای بر Git و GitHub",
+        "نصب و راه‌اندازی Git",
+        "ایجاد مخزن و commit کردن",
+        "استفاده از branch ها",
+        "Merge و Conflict resolution",
+        "کار با GitHub و پروژه‌های تیمی"
+      ]
+    },
+    {
+      "id": 4,
+      "quantity": 1,
+      "title": "دوره آموزشی HTML",
+      "categoryId": 3,
+      "price": 600000,
+      "description": "در این دوره به صورت کامل HTML رو یاد میگیریم",
+      "image": "/images/course/html.webp",
+      "level": "مقدماتی",
+      "duration": "۸ ساعت",
+      "teacherId": 1,
+      "teacher": {
+        "name": "محمد محمدی",
+        "avatar": "/images/teachers/1.webp",
+        "bio": "برنامه‌نویس فرانت‌اند و مدرس React با بیش از ۶ سال تجربه"
+      },
+      "outline": [
+        "مقدمه‌ای بر HTML",
+        "نصب و راه‌اندازی Git",
+        "ایجاد مخزن و commit کردن",
+        "استفاده از branch ها",
+        "Merge و Conflict resolution",
+        "کار با HTML و پروژه‌های تیمی"
+      ]
+    },
+    {
+      "id": 5,
+      "quantity": 1,
+      "title": "دوره آموزشی Sass",
+      "categoryId": 3,
+      "price": 450000,
+      "description": "در این دوره به صورت کامل Sass هاب رو یاد میگیریم",
+      "image": "/images/course/SASS.webp",
+      "level": "متوسط",
+      "duration": "3 ساعت",
+      "teacherId": 2,
+      "teacher": {
+        "name": "علیرضا حسینی",
+        "avatar": "/images/teachers/3.png",
+        "bio": "برنامه‌نویس بک‌اند با ۸ سال تجربه در توسعه وب و متخصص PHP"
+      },
+      "outline": [
+        "مقدمه‌ای بر Sass",
+        "نصب و راه‌اندازی Git",
+        "ایجاد مخزن و commit کردن",
+        "استفاده از branch ها",
+        "Merge و Conflict resolution",
+        "کار با Sass و پروژه‌های تیمی"
+      ]
+    },
+    {
+      "id": 6,
+      "quantity": 1,
+      "title": "دوره آموزشی جاوا اسکریپت",
+      "categoryId": 3,
+      "price": 1600000,
+      "description": "در این دوره به صورت کامل جاوا اسکریپت رو یاد میگیریم",
+      "image": "/images/course/Js.webp",
+      "level": "مقدماتی تا پیشرفته",
+      "duration": "10 ساعت",
+      "teacherId": 3,
+      "teacher": {
+        "name": "سارا محمدی",
+        "avatar": "/images/teachers/2.png",
+        "bio": "کارشناس DevOps با تجربه عملی در CI/CD و مدیریت پروژه با Git"
+      },
+      "outline": [
+        "مقدمه‌ای بر جاوا اسکریپت",
+        "نصب و راه‌اندازی جاوا اسکریپت",
+        "ایجاد مخزن و commit کردن",
+        "استفاده از branch ها",
+        "Merge و Conflict resolution",
+        "کار با جاوا اسکریپت و پروژه‌های تیمی"
+      ]
+    }
+  ],
+  "menuItems": [
+    {
+      "id": 1,
+      "path": "profile",
+      "title": "پروفایل",
+      "icon": "FaBook",
+      "active": true
+    },
+    {
+      "id": 2,
+      "path": "courses",
+      "title": "دوره‌های من",
+      "icon": "FaUser"
+    },
+    {
+      "id": 3,
+      "path": "transactions",
+      "title": "تراکنش‌ها",
+      "icon": "FaCog"
+    },
+    {
+      "id": 4,
+      "path": "notifications",
+      "title": "اعلان‌ها",
+      "icon": "FaCreditCard"
+    },
+    {
+      "id": 5,
+      "path": "settings",
+      "title": "تنظیمات",
+      "icon": "FaBell"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "فرهاد کاظم زاده",
+      "bio": "برنامه‌نویس و مدرس حرفه‌ای React با بیش از 7 سال سابقه.",
+      "image": "/images/teachers/1.webp",
+      "skills": ["Git", "React", "Js", "Php", "Python", "Laravel"],
+      "social": [
+        {
+          "id": 1,
+          "name": "instagram",
+          "icon": "FaInstagram",
+          "path": "https://instagram.com/FarhadKazemzadeh"
+        },
+        {
+          "id": 2,
+          "name": "linkedin",
+          "icon": "FaLinkedin",
+          "path": "https://linkedin.com/in/FarhadKazemzadeh"
+        },
+        {
+          "id": 3,
+          "name": "twitter",
+          "icon": "FaTwitter",
+          "path": "https://twitter.com/FarhadKazemzadeh"
+        }
+      ],
+      "courses": [
+        {
+          "id": 3,
+          "title": "آموزش Git",
+          "image": "/public/images/course/Git.webp"
+        },
+        {
+          "id": 1,
+          "title": "آموزش JavaScript",
+          "image": "/public/images/course/Js.webp"
+        },
+        {
+          "id": 2,
+          "title": "آموزش Php",
+          "image": "/public/images/course/php.webp"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "سارا احمدی",
+      "bio": "متخصص امنیت وب و مدرس دوره‌های OWASP و تست نفوذ.",
+      "image": "/images/teachers/2.png",
+      "skills": ["Php", "Python", "Laravel"],
+      "social": [
+        {
+          "id": 1,
+          "name": "instagram",
+          "icon": "FaInstagram",
+          "path": "https://instagram.com/SaraAhmadi"
+        },
+        {
+          "id": 2,
+          "name": "linkedin",
+          "icon": "FaLinkedin",
+          "path": "https://linkedin.com/in/SaraAhmadi"
+        },
+        {
+          "id": 3,
+          "name": "twitter",
+          "icon": "FaTwitter",
+          "path": "https://twitter.com/SaraAhmadi"
+        }
+      ],
+      "courses": [
+        {
+          "id": 2,
+          "title": "آموزش Php",
+          "image": "/public/images/course/php.webp"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "محمد کریمی",
+      "bio": "توسعه‌دهنده بک‌اند و مدرس Node.js و Express.",
+      "image": "/images/teachers/3.png",
+      "skills": ["Git", "React", "Js", "Php", "Laravel", "Html"],
+      "social": [
+        {
+          "id": 1,
+          "name": "instagram",
+          "icon": "FaInstagram",
+          "path": "https://instagram.com/Mohammadkarimi"
+        },
+        {
+          "id": 2,
+          "name": "linkedin",
+          "icon": "FaLinkedin",
+          "path": "https://linkedin.com/in/Mohammadkarimi"
+        },
+        {
+          "id": 3,
+          "name": "twitter",
+          "icon": "FaTwitter",
+          "path": "https://twitter.com/Mohammadkarimi"
+        }
+      ],
+      "courses": [
+        {
+          "id": 2,
+          "title": "آموزش Php",
+          "image": "/public/images/course/php.webp"
+        },
+        {
+          "id": 1,
+          "title": "آموزش Js",
+          "image": "/public/images/course/Js.webp"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "علی رضایی",
+      "email": "ali.rezaei@example.com",
+      "password": "hashed_password_1",
+      "role": "student",
+      "avatar": "/images/users/1.png",
+      "purchasedCourses": [1]
+    },
+    {
+      "id": 2,
+      "name": "زهرا کریمی",
+      "email": "zahra.karimi@example.com",
+      "password": "hashed_password_2",
+      "role": "student",
+      "avatar": "/images/users/2.png",
+      "purchasedCourses": [2, 5]
+    },
+    {
+      "id": 3,
+      "name": "حمیدرضا دارایی",
+      "email": "hamidrezadaraei@yahoo.com",
+      "password": "12345678",
+      "role": "student",
+      "avatar": "/images/users/3.png",
+      "purchasedCourses": [4, 2, 5]
+    },
+    {
+      "id": 4,
+      "name": "پرنیا طاهریان",
+      "email": "parniataherian2007@gmail.com",
+      "password": "hashed_password_4",
+      "role": "student",
+      "avatar": "/images/users/4.png",
+      "purchasedCourses": [6, 1, 3, 2]
+    },
+    {
+      "id": 5,
+      "name": "علیرضا محمدی",
+      "email": "alireza.mohamadi@example.com",
+      "password": "hashed_password_5",
+      "role": "teacher",
+      "avatar": "/images/users/5.png",
+      "purchasedCourses": [3, 6, 1, 2, 4, 5]
+    },
+    {
+      "id": 6,
+      "name": "مدیر سایت",
+      "email": "admin@example.com",
+      "password": "hashed_password_admin",
+      "role": "admin",
+      "avatar": "/images/users/6.png"
+    }
+  ]
+}

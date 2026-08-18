@@ -1,45 +1,42 @@
 //! ---------------------------------------- Import
-import React from "react";
 import { useParams } from "react-router-dom";
-import courses from "/src/data/courses";
+import CourseBanner from "/src/components/Course/Details/CourseBanner";
 import HeadCourse from "/src/components/Course/Details/HeadCourse";
 import InfoBoxCourse from "/src/components/Course/Details/InfoBoxCourse";
 import TeacherBoxCourse from "/src/components/Course/Details/TeacherBoxCourse";
 import OutlineCourse from "/src/components/Course/Details/OutlineCourse";
 import EnrollCourse from "/src/components/Course/Details/EnrollCourse";
 import NotFound from "/src/pages/Main/NotFound";
-//! ---------------------------------------- Component (CourseCard)
-const CourseDetails = () => {
+import { useQuery } from "@tanstack/react-query";
+import { getCourseDataByIdFn } from "/src/services/courseService";
+//! ---------------------------------------- Component (CourseDetails)
+export default function CourseDetails() {
+  //! ---------------------------------------- Hooks
   const { id } = useParams();
-  const chosen = courses.find((course) => +course.id === +id);
-  if (!chosen) {
-    return <NotFound />;
-  } else {
-    return (
-      <div className="bg-gray-200 shadow-md w-6xl mx-auto rounded-3xl overflow-hidden my-15">
-        {/* Course Banner */}
-        <div className="w-full">
-          <img
-            src={chosen.image}
-            alt={chosen.title}
-            className="w-full h-100 object-cover"
-          />
-        </div>
-        <div className="p-8">
-          {/* Title + Desc */}
-          <HeadCourse chosen={chosen} />
-          {/* Info Box */}
-          <InfoBoxCourse chosen={chosen} />
-          {/* Instructor Box */}
-          <TeacherBoxCourse chosen={chosen} />
-          {/* Outline */}
-          <OutlineCourse chosen={chosen} />
-          {/* Enroll Section */}
-          <EnrollCourse chosen={chosen} />
-        </div>
+  //! ---------------------------------------- Query
+  const { data: course, isLoading } = useQuery({
+    queryKey: ["course"],
+    queryFn: () => getCourseDataByIdFn(id),
+  });
+  //! ---------------------------------------- Return
+  return isLoading || course ? (
+    <div className="bg-gray-200 shadow-md w-6xl mx-auto rounded-3xl overflow-hidden my-15 flex flex-col">
+      {/* Course Banner */}
+      <CourseBanner {...(!isLoading && { course })} />
+      <div className="p-8 gap-5 flex flex-col">
+        {/* Title + Desc */}
+        <HeadCourse {...(!isLoading && { course })} />
+        {/* Info Box */}
+        <InfoBoxCourse {...(!isLoading && { course })} />
+        {/* Instructor Box */}
+        <TeacherBoxCourse {...(!isLoading && { course })} />
+        {/* Outline */}
+        <OutlineCourse {...(!isLoading && { course })} />
+        {/* Enroll Section */}
+        <EnrollCourse {...(!isLoading && { course })} />
       </div>
-    );
-  }
-};
-
-export default CourseDetails;
+    </div>
+  ) : (
+    <NotFound />
+  );
+}

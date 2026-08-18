@@ -1,7 +1,8 @@
 //! ---------------------------------------- Import
 import { FaLock, FaEnvelope, FaUserAlt } from "react-icons/fa";
 //! ---------------------------------------- Component (Image)
-export default function Image() {
+export default function LoginImage() {
+  //! ---------------------------------------- Return
   return (
     <div className="hidden md:block bg-blue-600 p-10 text-white relative">
       <h2 className="text-3xl font-bold leading-tight mb-4">

@@ -1,12 +1,20 @@
 //! ---------------------------------------- Import
-import React from "react";
 import { FaSearch } from "react-icons/fa";
-import articles from "/src/data/articles";
 import ArticleCard from "/src/components/Cards/ArticleCard";
+import { useQuery } from "@tanstack/react-query";
+import { getArticlesDataFn } from "/src/services/articleService";
+//! ---------------------------------------- Variables
+const skeletonCount = 3;
 //! ---------------------------------------- Component (Article)
-const Article = () => {
+export default function Article() {
+  //! ---------------------------------------- Query
+  const { data: articles, isLoading } = useQuery({
+    queryKey: ["articles"],
+    queryFn: getArticlesDataFn,
+  });
+  //! ---------------------------------------- Return
   return (
-    <div className="min-h-fit bg-gray-200 rounded-3xl flex-grow w-6xl flex flex-col mx-auto text-gray-800 p-5 my-15">
+    <div className="w-4/5 mx-auto min-h-[30rem] bg-gray-200 rounded-3xl flex-grow flex flex-col text-gray-800 p-5 my-15">
       <div className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">
           همه مقالات
@@ -26,12 +34,14 @@ const Article = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-h-110 overflow-auto px-5">
-        {articles.map((article) => (
-          <ArticleCard key={article.id} article={article} />
-        ))}
+        {isLoading
+          ? Array.from({ length: skeletonCount }).map((_, index) => (
+              <ArticleCard key={index} />
+            ))
+          : articles?.map((article) => (
+              <ArticleCard key={article.id} {...{ article }} />
+            ))}
       </div>
     </div>
   );
-};
-
-export default Article;
+}

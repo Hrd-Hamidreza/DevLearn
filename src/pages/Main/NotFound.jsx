@@ -1,8 +1,9 @@
 //! ---------------------------------------- Import
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-//! ---------------------------------------- Component (Products)
+//! ---------------------------------------- Component (NotFound)
 export default function NotFound() {
+  //! ---------------------------------------- Return
   return (
     <section className="bg-white h-screen flex justify-center items-center column dark:bg-gray-900 w-full h-full">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">

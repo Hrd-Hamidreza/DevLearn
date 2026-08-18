@@ -2,11 +2,8 @@
 import { Outlet } from "react-router-dom";
 import Header from "/src/layouts/Header/Header";
 import Footer from "/src/layouts/Footer/Footer";
-//! ---------------------------------------- Variables
-//! ---------------------------------------- Functions
 //! ---------------------------------------- Component (MainPeak)
 export default function MainPeak() {
-  //! ----------------------------------------
   //! ---------------------------------------- Return
   return (
     <div>

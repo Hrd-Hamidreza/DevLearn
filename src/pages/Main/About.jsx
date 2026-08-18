@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
-import React from "react";
 //! ---------------------------------------- Component (About)
-const About = () => {
+export default function About() {
+  //! ---------------------------------------- Return
   return (
     <div className="min-h-fit bg-gray-200 rounded-3xl flex-grow max-w-6xl flex flex-col mx-auto text-gray-800 p-5 my-15">
       <h2 className="text-4xl font-bold mb-6 text-center">درباره ما</h2>
@@ -23,6 +23,4 @@ const About = () => {
       </p>
     </div>
   );
-};
-
-export default About;
+}

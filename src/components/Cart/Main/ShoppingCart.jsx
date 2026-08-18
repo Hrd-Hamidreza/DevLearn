@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { quantity, deleted } from "/src/features/cart/cartSlice";
 //! ---------------------------------------- Component (ShoppingCart)
 export default function ShoppingCart() {
-  //! ---------------------------------------- cart
+  //! ---------------------------------------- Redux
   const { cart, account } = useSelector((store) => store);
   const dispatch = useDispatch();
   //! ---------------------------------------- Return

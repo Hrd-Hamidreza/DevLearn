@@ -1,11 +1,11 @@
 //! ---------------------------------------- Import
 import { useSelector } from "react-redux";
 import store from "/src/app/store";
-//! ---------------------------------------- Component (Head)
+//! ---------------------------------------- Component (Review)
 export default function Review() {
-  //! ---------------------------------------- cart
+  //! ---------------------------------------- Redux
   const { cart, account } = useSelector((store) => store);
-  //! ---------------------------------------- Reducer
+  //! ---------------------------------------- Hooks
   const total = cart.courses.reduce(
     (scratch, product) => scratch + product.price * product.quantity,
     0,

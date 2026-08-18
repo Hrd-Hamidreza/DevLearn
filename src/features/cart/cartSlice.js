@@ -22,7 +22,6 @@ const cartSlice = createSlice({
       state.courses = repetitiveCourse
         ? [...state.courses]
         : [action.payload, ...state.courses];
-      console.log(state);
       setLocalStorage({ data: state, name: CART });
     },
     deleted: (state, action) => {
