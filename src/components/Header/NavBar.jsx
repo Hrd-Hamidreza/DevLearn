@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   //! ---------------------------------------- Return
   return (
-    <nav className="flex gap-7 md:flex">
+    <nav className="flex justify-center items-center gap-5 h-full font-semibold">
       <NavLink to={"/"} className="hover:text-blue-600">
         Home
       </NavLink>

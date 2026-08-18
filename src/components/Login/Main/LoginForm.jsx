@@ -82,7 +82,7 @@ export default function () {
         )}
         {/* Forgot */}
         <div className="flex justify-between text-sm text-gray-500">
-          <label className="flex items-center gap-1">
+          <label className="flex items-center gap-1 cursor-pointer">
             <input type="checkbox" className="accent-blue-600" />
             Remember me.
           </label>

@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const Logo = () => {
   //! ---------------------------------------- Return
   return (
-    <Link to={"/"} className="text-2xl font-bold text-blue-600 cursor-pointer">
+    <Link
+      to={"/"}
+      className="text-2xl font-bold text-blue-600 cursor-pointer h-full"
+    >
       DevLearn
     </Link>
   );
