@@ -2,8 +2,9 @@
 import { Outlet } from "react-router-dom";
 import Header from "/src/layouts/Header/Header";
 import Footer from "/src/layouts/Footer/Footer";
+import { memo } from "react";
 //! ---------------------------------------- Component (MainPeak)
-export default function MainPeak() {
+const MainPeak = () => {
   //! ---------------------------------------- Return
   return (
     <div>
@@ -14,4 +15,6 @@ export default function MainPeak() {
       <Footer />
     </div>
   );
-}
+};
+//! ---------------------------------------- Export
+export default memo(MainPeak);
