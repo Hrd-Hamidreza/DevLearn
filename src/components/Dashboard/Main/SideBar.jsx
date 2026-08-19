@@ -78,7 +78,7 @@ export default function SideBar() {
             })}
             <button
               onClick={exit}
-              className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-red-400 w-full"
+              className="dashboard flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer hover:bg-red-500 w-full"
             >
               <MyIcons type={`signOut-2`} />
               <span>Log out</span>

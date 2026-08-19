@@ -29,7 +29,7 @@ export default function CourseCard({ course = undefined, type = "default" }) {
 
             {type === "my-courses" && (
               <p className="text-sm text-gray-500">
-                <strong>Progress:</strong>
+                <strong>Progress: </strong>
                 60%
               </p>
             )}
